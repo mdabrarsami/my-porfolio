@@ -1,0 +1,517 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Md Abrar Sami — Senior Software Engineer and Full-Stack Developer specializing in React, TypeScript, Java, Spring Boot and MS SQL. Hyderabad, India.">
+<meta name="theme-color" content="#080a0d">
+<title>Md Abrar Sami — Senior Software Engineer | Full-Stack Developer</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23080a0d'/><text x='16' y='23' font-family='sans-serif' font-size='16' font-weight='900' fill='%23b8ff4d' text-anchor='middle'>A</text></svg>">
+<style>
+:root{--bg:#080a0d;--surface:#0f1217;--surface2:#151922;--text:#f5f7fa;--muted:#929aa7;--line:#252b35;--accent:#b8ff4d;--accent2:#ddffab;--max:1180px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{margin:0;background:radial-gradient(circle at 80% 0%,#17200f 0,transparent 27%),var(--bg);color:var(--text);font:15px/1.65 Inter,system-ui,-apple-system,Segoe UI,sans-serif;overflow-x:hidden}
+img,svg,video{max-width:100%;height:auto}
+button,input{font:inherit}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:var(--max);margin:auto;padding:0 24px}
+.skip{position:absolute;left:-9999px;top:0;background:var(--accent);color:#0a0c08;padding:10px 16px;border-radius:0 0 10px 0;font-weight:800;z-index:200}
+.skip:focus{left:0}
+
+header.nav{border-bottom:1px solid var(--line);position:sticky;top:0;background:rgba(8,10,13,.82);backdrop-filter:blur(18px);z-index:50}
+header.nav .wrap{height:74px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-size:20px;font-weight:900;letter-spacing:-.06em}.logo span{color:var(--accent)}
+.navlinks{display:flex;gap:24px;color:var(--muted);font-size:13px}.navlinks a:hover{color:#fff}
+.navright{display:flex;gap:8px;align-items:center}
+.pill,.iconbtn{border:1px solid var(--line);border-radius:999px;padding:8px 12px;font-size:12px;background:transparent;color:#fff;cursor:pointer}
+.pill:hover,.iconbtn:hover{border-color:#4a515c}
+
+.hero{min-height:calc(100vh - 74px);display:grid;grid-template-columns:1.25fr .75fr;align-items:center;gap:70px;padding:75px 0 85px}
+.hero>*{min-width:0}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.17em;color:var(--accent);font-weight:800}
+.hero h1{font-size:clamp(54px,8.3vw,105px);line-height:.9;letter-spacing:-.085em;margin:18px 0 28px;max-width:900px}
+.hero h1 span{color:var(--muted)}
+.hero .lead{font-size:19px;color:var(--muted);max-width:700px}
+.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}
+.btn{padding:12px 16px;border:1px solid var(--line);border-radius:12px;font-size:13px;font-weight:800;background:transparent;color:inherit;cursor:pointer}
+.btn.primary{background:var(--accent);color:#0a0c08;border-color:var(--accent)}
+.hero-card{background:linear-gradient(145deg,#151a13,#0f1217 65%);border:1px solid #2a3222;border-radius:28px;padding:28px;box-shadow:0 25px 70px rgba(0,0,0,.3);transform:rotate(1deg);width:100%;max-width:420px;justify-self:end}
+.avatar{height:190px;border-radius:20px;background:linear-gradient(135deg,#242c1b,#11141a);display:grid;place-items:center;font-size:68px;font-weight:900;letter-spacing:-.08em;color:var(--accent);border:1px solid #343d2a}
+.hero-card h3{font-size:24px;letter-spacing:-.04em;margin:22px 0 2px}.hero-card p{color:var(--muted);margin:0}
+.status{margin-top:24px;padding-top:18px;border-top:1px solid var(--line);display:flex;gap:8px;align-items:center;color:var(--muted);font-size:12px}
+.dot{display:block;flex:0 0 auto;width:8px;height:8px;background:var(--accent);border-radius:50%;box-shadow:0 0 14px var(--accent)}
+
+.ticker{border-top:1px solid var(--line);border-bottom:1px solid var(--line);overflow:hidden;white-space:nowrap;color:#66707d;font-size:12px;text-transform:uppercase;letter-spacing:.16em}
+.ticker .track{display:inline-block;padding:17px 0;animation:move 25s linear infinite;will-change:transform}
+.ticker span{margin:0 35px}.ticker b{color:#b5bdc8}
+@keyframes move{to{transform:translateX(-50%)}}
+
+section{padding:90px 0;border-bottom:1px solid var(--line)}
+.head{display:flex;justify-content:space-between;gap:30px;margin-bottom:35px}
+.head h2{font-size:42px;line-height:1;letter-spacing:-.065em;margin:0}
+.head p{max-width:470px;color:var(--muted);margin:3px 0}
+
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:24px;transition:transform .25s,border-color .25s,background .25s}
+.card:hover{transform:translateY(-5px);border-color:#454c57;background:var(--surface2)}
+.num{color:var(--accent);font-size:11px;font-weight:900}
+.card h3{font-size:20px;letter-spacing:-.04em;margin:20px 0 8px}.card p{color:var(--muted);margin:0}
+
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border:1px solid var(--line);border-radius:22px;overflow:hidden}
+.stat{padding:27px;border-right:1px solid var(--line)}.stat:last-child{border-right:0}
+.stat strong{font-size:38px;letter-spacing:-.06em;display:block}.stat span{color:var(--muted);font-size:12px}
+
+.timeline .row{display:grid;grid-template-columns:170px minmax(0,1fr) 80px;gap:35px;padding:28px 0;border-top:1px solid var(--line);align-items:start}
+.timeline .row:first-child{border-top:0}
+.date{color:var(--muted);font-size:12px}.row h3{margin:0;font-size:24px}
+.role{color:var(--accent);font-size:12px;font-weight:800;margin:3px 0 8px}
+.row p{color:var(--muted);margin:0;max-width:760px}
+.arrow{font-size:24px;text-align:right;color:#68717e}
+
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.project{min-height:315px;display:flex;flex-direction:column;justify-content:space-between;cursor:pointer;overflow:hidden;text-align:left;width:100%;font:inherit;color:inherit}
+.projecttop{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+.project h3{font-size:29px;letter-spacing:-.05em;margin:14px 0 8px}
+.project p{color:var(--muted);max-width:510px}
+.tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px;max-width:100%}
+.tag{font-size:10px;color:#aeb6c2;border:1px solid var(--line);padding:5px 9px;border-radius:99px;white-space:nowrap}
+.project .open{color:var(--accent);font-weight:800;font-size:12px}
+
+.public{background:linear-gradient(120deg,#11151b,#0e1115);border:1px solid var(--line);border-radius:22px;padding:25px;margin-top:14px;display:flex;justify-content:space-between;gap:20px;align-items:center}
+.public>*{min-width:0}.public p{color:var(--muted);margin:4px 0 0}.public a{color:var(--accent);font-weight:800}
+
+.stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.stack .card{min-height:160px}.stack b{color:var(--accent);font-size:10px;letter-spacing:.1em}
+.principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.principles .card{min-height:190px}.principles h3{font-size:23px}
+
+/* Résumé */
+.resume{display:grid;grid-template-columns:1.15fr .85fr;gap:14px;align-items:stretch}
+.resume>*{min-width:0}
+.resumecard{background:linear-gradient(145deg,#151a13,#0f1217 70%);border:1px solid #2a3222;border-radius:24px;padding:30px;display:flex;flex-direction:column;justify-content:space-between;gap:24px}
+.resumecard h3{font-size:30px;letter-spacing:-.05em;margin:14px 0 8px}
+.resumecard p{color:var(--muted);margin:0}
+.resumemeta{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.resumemeta div{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px}
+.resumemeta strong{display:block;font-size:13px;letter-spacing:-.02em}
+.resumemeta span{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}
+.resumelist{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}
+.resumelist h3{margin:0 0 4px;font-size:20px;letter-spacing:-.04em}
+.resumelist ul{list-style:none;margin:16px 0 0;padding:0;display:grid;gap:12px}
+.resumelist li{color:var(--muted);font-size:14px;padding-left:18px;position:relative}
+.resumelist li::before{content:"";position:absolute;left:0;top:9px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.resumelist li b{color:var(--text)}
+.resumenote{color:#6e7783;font-size:11px;margin:14px 0 0}
+
+.now{background:var(--accent);color:#0a0d07;border-radius:26px;padding:42px;display:grid;grid-template-columns:1fr 2fr;gap:45px}
+.now h2{font-size:48px;line-height:1;letter-spacing:-.07em;margin:0}.now p{font-size:18px;margin:0}
+.contact{text-align:center;padding:110px 0}
+.contact h2{font-size:clamp(45px,7vw,88px);line-height:.92;letter-spacing:-.08em;margin:16px auto 25px;max-width:900px}
+.contact p{color:var(--muted);font-size:17px}.contact .actions{justify-content:center}
+footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;color:#6e7783;font-size:11px}
+.card h3,.project h3,.row h3,.head h2,.now h2,.contact h2,.resumecard h3{overflow-wrap:anywhere}
+
+.js .reveal{opacity:0;transform:translateY(20px);transition:opacity .7s ease,transform .7s ease}
+.js .reveal.visible{opacity:1;transform:none}
+
+.modal{position:fixed;inset:0;background:rgba(0,0,0,.7);backdrop-filter:blur(10px);z-index:100;display:none;align-items:center;justify-content:center;padding:20px;overflow:auto}
+.modal.open{display:flex}
+.modalbox{position:relative;max-width:650px;width:100%;background:#11151b;border:1px solid #333a45;border-radius:24px;padding:28px;box-shadow:0 30px 100px #000;max-height:calc(100dvh - 40px);overflow:auto}
+.modalbox .close{position:absolute;top:18px;right:18px}
+.modalbox h2{font-size:34px;letter-spacing:-.06em;margin:8px 0;padding-right:45px}
+.modalbox p{color:var(--muted)}
+.kbd{flex:0 0 auto;font-size:10px;border:1px solid #353b45;padding:3px 6px;border-radius:5px;color:#8d96a3}
+
+.command{position:fixed;inset:0;background:rgba(0,0,0,.6);backdrop-filter:blur(8px);display:none;align-items:flex-start;justify-content:center;padding:12vh 12px 30px;z-index:120;overflow:auto}
+.command.open{display:flex}
+.cmd{width:min(600px,92vw);background:#11151a;border:1px solid #343a44;border-radius:18px;overflow:hidden;box-shadow:0 30px 100px #000;max-height:calc(100dvh - 24vh)}
+.cmd input{width:100%;padding:18px;background:transparent;border:0;border-bottom:1px solid var(--line);outline:0;color:#fff;font-size:16px}
+#cmdLinks{max-height:calc(100dvh - 32vh);overflow:auto}
+#cmdLinks a{display:block;padding:13px 18px;color:#c5cbd3}
+#cmdLinks a:hover,#cmdLinks a:focus-visible{background:#1a1f27;color:var(--accent)}
+.cmdempty{padding:16px 18px;color:#6e7783;font-size:13px}
+
+@media(max-width:850px){
+  .wrap{padding-left:20px;padding-right:20px}
+  header.nav .wrap{height:70px}
+  .navlinks{display:none}
+  .hero{grid-template-columns:1fr;gap:42px;min-height:auto;padding:70px 0}
+  .hero-card{justify-self:start;max-width:560px;transform:none}
+  .cards,.stats,.stack,.principles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .projects{grid-template-columns:1fr}
+  .resume{grid-template-columns:1fr}
+  .timeline .row{grid-template-columns:120px minmax(0,1fr)}
+  .arrow{display:none}
+  .now{grid-template-columns:1fr}
+}
+@media(max-width:560px){
+  .wrap{padding-left:16px;padding-right:16px}
+  .navright{margin-left:auto}
+  .pill{display:none}
+  .hero{padding:52px 0 60px;gap:32px}
+  .hero h1{font-size:clamp(45px,14vw,64px);line-height:.93}
+  .hero .lead{font-size:17px}
+  .hero-card{padding:22px;border-radius:22px}
+  .avatar{height:155px;font-size:56px}
+  section{padding:70px 0}
+  .head{display:block;margin-bottom:26px}
+  .head h2{font-size:clamp(32px,9vw,42px)}
+  .head p{margin-top:14px}
+  .cards,.stats,.stack,.principles,.resumemeta{grid-template-columns:1fr}
+  .stat{border-right:0;border-bottom:1px solid var(--line)}
+  .stat:last-child{border-bottom:0}
+  .timeline .row{grid-template-columns:1fr;gap:5px;padding:22px 0}
+  .projects .project{min-height:280px}
+  .project h3{font-size:25px}
+  .resumecard{padding:24px}
+  .resumecard h3{font-size:26px}
+  .now{padding:28px}
+  .now h2{font-size:39px}
+  .public{display:block}
+  .public a{display:inline-block;margin-top:14px}
+  .contact{padding:80px 0}
+  footer{display:block;padding-bottom:35px}
+  footer div+div{margin-top:8px;overflow-wrap:anywhere}
+  .modal{padding:10px}
+  .modalbox{padding:24px 20px;max-height:calc(100dvh - 20px);border-radius:20px}
+  .command{padding-top:9vh}
+  .cmd{width:100%;max-height:82dvh}
+  #cmdLinks{max-height:68dvh}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
+}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#">ABRAR<span>.</span></a>
+    <nav class="navlinks" aria-label="Primary">
+      <a href="#work">Work</a><a href="#journey">Journey</a><a href="#stack">Stack</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="navright">
+      <button class="iconbtn" id="cmdBtn" type="button" aria-haspopup="dialog">⌘K</button>
+      <a class="pill" href="#contact">Let's talk ↗</a>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+<main id="main">
+<section class="hero">
+  <div class="reveal">
+    <p class="eyebrow">Software Engineer · Hyderabad, India</p>
+    <h1>I build software that makes <span>complicated things simple.</span></h1>
+    <p class="lead">I'm Abrar Sami — a Senior Software Engineer and Full-Stack Developer with <b>8+ years of professional experience</b> spanning enterprise frontend development, Java/Spring Boot, C#/.NET, MS SQL, REST APIs and database-driven applications. I currently focus on React + TypeScript for enterprise software while keeping my Java and SQL foundation strong.</p>
+    <div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn" href="#resume">Résumé →</a></div>
+  </div>
+  <aside class="hero-card reveal">
+    <div class="avatar" aria-hidden="true">AS</div>
+    <h3>Abrar Sami</h3><p>React · TypeScript · Java · SQL</p>
+    <p class="status"><span class="dot" aria-hidden="true"></span> Open to engineering opportunities</p>
+  </aside>
+</section>
+</main>
+</div>
+
+<div class="ticker" aria-hidden="true"><div class="track"><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>REACT</span><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>REACT</span></div></div>
+
+<div class="wrap">
+<section class="reveal">
+  <div class="head"><h2>By the numbers.</h2><p>A quick snapshot of the engineering path behind the portfolio.</p></div>
+  <div class="stats">
+    <div class="stat"><strong>8+</strong><span>Years professional software development experience</span></div>
+    <div class="stat"><strong>10</strong><span>Highlighted professional + personal projects</span></div>
+    <div class="stat"><strong>2</strong><span>Computer Science degrees</span></div>
+    <div class="stat"><strong>3</strong><span>Languages: English · Hindi · Telugu</span></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="head"><h2>What I build.</h2><p>Enterprise software by day. Product experiments, developer tools and practical software by curiosity.</p></div>
+  <div class="cards">
+    <div class="card"><div class="num">01 / FRONTEND</div><h3>React + TypeScript</h3><p>Complex business interfaces, reusable components, data-heavy screens and practical UX.</p></div>
+    <div class="card"><div class="num">02 / BACKEND</div><h3>Java + APIs</h3><p>Full-stack foundations and API-driven application architecture built from real enterprise experience.</p></div>
+    <div class="card"><div class="num">03 / DATA</div><h3>SQL + SQLite</h3><p>Strong Microsoft SQL development background and a practical approach to data modelling.</p></div>
+    <div class="card"><div class="num">04 / PRODUCTS</div><h3>Tools + PWAs</h3><p>Offline-first utilities, browser tools, desktop apps and small products that solve real problems.</p></div>
+  </div>
+</section>
+
+<section id="journey" class="reveal">
+  <div class="head"><h2>The journey.</h2><p>My career has moved across consulting, data, backend development and modern frontend engineering — giving me a broader understanding of how enterprise software fits together.</p></div>
+  <div class="timeline">
+    <div class="row"><div class="date">EARLY CAREER</div><div><h3>Technical Consultant</h3><div class="role">~1.5 YEARS</div><p>Started in technical consulting, learning how requirements, users and enterprise delivery connect.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+    <div class="row"><div class="date">NEXT</div><div><h3>SQL Developer</h3><div class="role">~1.5 YEARS</div><p>Moved deep into Microsoft SQL development and developed a strong data and database problem-solving foundation.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+    <div class="row"><div class="date">THEN</div><div><h3>C# Developer</h3><div class="role">~1 YEAR</div><p>Expanded into application development and strengthened programming and backend fundamentals.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+    <div class="row"><div class="date">FULL STACK</div><div><h3>Java Full-Stack Developer</h3><div class="role">CENTRA HUB · HYDERABAD</div><p>Moved into full-stack Java development using Java, Spring, Spring Boot, JavaScript, React, REST APIs and MS SQL across enterprise applications.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+    <div class="row"><div class="date">MAY 2024 — PRESENT</div><div><h3>Senior Software Engineer</h3><div class="role">SMARTAPP.COM · HYDERABAD</div><p>Focused on React 18, TypeScript, JavaScript, Redux, Context API, MUI, AG Grid and REST APIs for enterprise financial and construction management applications.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+  </div>
+</section>
+
+<section id="work" class="reveal">
+  <div class="head"><h2>Things I've built.</h2><p>Most professional work is private. These are representative product experiments and public projects.</p></div>
+  <div class="projects">
+    <article class="card project" role="button" tabindex="0" data-title="ABR Labs Tools" data-body="A multi-tool PWA concept built around fast browser utilities, offline capability, mobile usability and a native-app feel."><div><div class="projecttop"><div class="num">01</div><span class="kbd">DETAILS</span></div><h3>ABR Labs Tools</h3><p>A collection of browser-based utilities designed around a fast, mobile-friendly, offline-capable PWA experience.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PWA</span><span class="tag">Offline-first</span></div></div><div class="open">Explore concept →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Image Processing Tools" data-body="Client-side image experiments including crop workflows, collage/image extraction and browser-based processing without unnecessarily sending user files to a server."><div><div class="projecttop"><div class="num">02</div><span class="kbd">DETAILS</span></div><h3>Image Processing Tools</h3><p>Client-side image utilities exploring cropping, extraction, enhancement and practical browser processing.</p><div class="tags"><span class="tag">Canvas</span><span class="tag">JavaScript</span><span class="tag">PWA</span></div></div><div class="open">Explore concept →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="LAN Messenger" data-body="An IP-based messenger inspired by classic LAN communication tools, redesigned around a modern chat experience."><div><div class="projecttop"><div class="num">03</div><span class="kbd">DETAILS</span></div><h3>LAN Messenger</h3><p>An IP-based messaging concept inspired by classic LAN communication with a modern chat experience.</p><div class="tags"><span class="tag">Web</span><span class="tag">TypeScript</span><span class="tag">Networking</span></div></div><div class="open">Explore concept →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Desktop File Transfer" data-body="A desktop-oriented workflow for browsing remote Windows files, uploads and downloads, designed to reduce repetitive remote-desktop work."><div><div class="projecttop"><div class="num">04</div><span class="kbd">DETAILS</span></div><h3>Desktop File Transfer</h3><p>A desktop approach to remote file browsing, uploads and downloads for practical Windows environments.</p><div class="tags"><span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">Windows</span></div></div><div class="open">Explore concept →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Google Drive Explorer" data-body="An Electron-based file explorer concept focused on navigating Drive data and improving large-file transfer workflows."><div><div class="projecttop"><div class="num">05</div><span class="kbd">DETAILS</span></div><h3>Google Drive Explorer</h3><p>An Electron-based file explorer concept focused on Drive navigation and large-file transfer workflows.</p><div class="tags"><span class="tag">Electron</span><span class="tag">Google Drive</span><span class="tag">TypeScript</span></div></div><div class="open">Explore concept →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Developer &amp; Browser Tools" data-body="Experiments around browser productivity: network logging, CORS, OCR, TOTP, screen recording and other utility workflows."><div><div class="projecttop"><div class="num">06</div><span class="kbd">DETAILS</span></div><h3>Developer &amp; Browser Tools</h3><p>Experiments around network logging, CORS, OCR, TOTP, screen recording and browser productivity.</p><div class="tags"><span class="tag">Chrome MV3</span><span class="tag">React</span><span class="tag">APIs</span></div></div><div class="open">Explore concept →</div>
+    </article>
+  </div>
+  <div class="public"><div><b>More on GitHub</b><p>Public repositories are only a small slice of my overall engineering work.</p></div><a href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">github.com/mdabrarsami ↗</a></div>
+</section>
+
+<section id="stack" class="reveal">
+  <div class="head"><h2>My stack.</h2><p>A practical engineering stack spanning frontend, backend, databases, architecture and delivery.</p></div>
+  <div class="stack">
+    <div class="card"><b>01 · PRIMARY</b><h3>React / TypeScript</h3><p>React 18, TypeScript, JavaScript, Redux, Context API, MUI, AG Grid, Chart.js, i18next and ReactQuill.</p></div>
+    <div class="card"><b>02 · BACKEND</b><h3>Java / C# / APIs</h3><p>Java, Spring, Spring Boot, C#/.NET, JSP, FreeMarker/FTL and REST API development across full-stack applications.</p></div>
+    <div class="card"><b>03 · DATA</b><h3>Microsoft SQL</h3><p>Strong MS SQL development background covering database structures, stored procedures, reporting and query optimization.</p></div>
+    <div class="card"><b>04 · ADDITIONAL</b><h3>Docker / Cloud</h3><p>Docker plus AWS and Azure fundamentals, with practical exposure to deployment and CI/CD concepts.</p></div>
+    <div class="card"><b>05 · WEB</b><h3>PWA / Browser APIs</h3><p>Offline-capable apps, browser extensions, client-side processing and responsive experiences.</p></div>
+    <div class="card"><b>06 · ARCHITECTURE</b><h3>Frontend Architecture</h3><p>Reusable components, state management, API integration, authentication, error handling, performance and maintainable enterprise UI.</p></div>
+    <div class="card"><b>07 · DELIVERY</b><h3>Engineering Delivery</h3><p>Git, deployment, production debugging, integration testing, code reviews, technical documentation and Agile/Scrum delivery.</p></div>
+    <div class="card"><b>08 · DATABASES</b><h3>SQL Engineering</h3><p>Microsoft SQL Server, stored procedures, functions, views, database design, query optimization and reporting, with MySQL, PostgreSQL and NoSQL exposure.</p></div>
+    <div class="card"><b>09 · AI WORKFLOWS</b><h3>AI-Assisted Engineering</h3><p>Claude Code, ChatGPT, GitHub Copilot and MCP-based workflows for development, debugging, refactoring and prototyping.</p></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="head"><h2>How I think.</h2><p>The engineering principles behind the work.</p></div>
+  <div class="principles">
+    <div class="card"><div class="num">01</div><h3>Simplicity</h3><p>If users need documentation to understand the interface, I probably haven't finished designing it.</p></div>
+    <div class="card"><div class="num">02</div><h3>Practical engineering</h3><p>I prefer maintainable, fast and useful solutions over solutions that are impressive only on paper.</p></div>
+    <div class="card"><div class="num">03</div><h3>Ownership</h3><p>I like understanding how the pieces fit — data, APIs, architecture, UI and the user experience.</p></div>
+  </div>
+</section>
+
+<section class="reveal" id="impact">
+  <div class="head"><h2>Impact, not just titles.</h2><p>Selected outcomes from my professional experience, taken from my résumé. The percentages below are résumé-reported results.</p></div>
+  <div class="cards">
+    <div class="card"><div class="num">SMARTAPP.COM</div><h3>25% ↑ user satisfaction</h3><p>Led responsive UI development for a construction management platform.</p></div>
+    <div class="card"><div class="num">SMARTAPP.COM</div><h3>30% ↓ data entry time</h3><p>Implemented automated workflows that reduced repetitive data entry.</p></div>
+    <div class="card"><div class="num">SMARTAPP.COM</div><h3>20% ↑ performance</h3><p>Improved application performance through refactoring and caching.</p></div>
+    <div class="card"><div class="num">CENTRA HUB</div><h3>50% ↓ analysis time</h3><p>Built reporting capabilities that reduced manual data analysis effort.</p></div>
+    <div class="card"><div class="num">CENTRA HUB</div><h3>30% ↑ query performance</h3><p>Optimized database queries to improve application performance.</p></div>
+    <div class="card"><div class="num">CENTRA HUB</div><h3>20% ↓ platform cost</h3><p>Supported migration of a legacy system to a cloud-based platform.</p></div>
+  </div>
+</section>
+
+<section class="reveal" id="case-studies">
+  <div class="head"><h2>Professional work.</h2><p>Selected systems from my résumé — showing the breadth of domains I've worked across.</p></div>
+  <div class="projects">
+    <article class="card project" role="button" tabindex="0" data-title="Logistics Management System — TSRTC" data-body="Architect / Full-Stack Developer project using React, JavaScript, Spring Boot and REST APIs. Designed and developed enterprise logistics management functionality, working across frontend and backend workflows and integrating React interfaces with Spring Boot services.">
+      <div><div class="projecttop"><div class="num">01 / GOVERNMENT</div><span class="kbd">DETAILS</span></div><h3>Logistics Management</h3><p>TSRTC logistics management functionality spanning React interfaces, Spring Boot services and REST API integration.</p><div class="tags"><span class="tag">Spring Boot</span><span class="tag">JavaScript</span><span class="tag">JWT</span><span class="tag">JMeter</span></div></div><div class="open">View case study →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Dealer Management System — Benelli" data-body="Architect / Full-Stack Developer project using React, JavaScript, Spring Boot and MS SQL. Designed and developed dealer management functionality across frontend workflows, backend services and database-driven business operations.">
+      <div><div class="projecttop"><div class="num">02 / AUTOMOTIVE</div><span class="kbd">DETAILS</span></div><h3>Dealer Management</h3><p>Benelli dealer management functionality spanning React workflows, Spring Boot services and MS SQL.</p><div class="tags"><span class="tag">Spring Boot</span><span class="tag">MS-SQL</span><span class="tag">JavaScript</span></div></div><div class="open">View case study →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Project Management System — NCC" data-body="Architect / Full-Stack Developer project using React, JavaScript, Spring Boot and MS SQL. Developed project-management functionality with SQL-backed application workflows and enterprise business processes.">
+      <div><div class="projecttop"><div class="num">03 / PROJECT OPS</div><span class="kbd">DETAILS</span></div><h3>Project Management</h3><p>NCC project-management functionality built with React, Spring Boot and MS SQL-backed workflows.</p><div class="tags"><span class="tag">Spring Boot</span><span class="tag">MS-SQL</span><span class="tag">Dashboards</span></div></div><div class="open">View case study →</div>
+    </article>
+    <article class="card project" role="button" tabindex="0" data-title="Event Management System — Hyndava Nimantran" data-body="Architect / Full-Stack Developer project using React, JavaScript, Spring Boot and MS SQL. Designed and developed event-management functionality across frontend, backend and database layers.">
+      <div><div class="projecttop"><div class="num">04 / EVENTS</div><span class="kbd">DETAILS</span></div><h3>Event Management</h3><p>Event-management functionality combining React, Spring Boot and MS SQL-backed business workflows.</p><div class="tags"><span class="tag">ReactJS</span><span class="tag">Spring Boot</span><span class="tag">MS-SQL</span></div></div><div class="open">View case study →</div>
+    </article>
+  </div>
+</section>
+
+<section class="reveal" id="resume">
+  <div class="head"><h2>Résumé.</h2><p>The full two-page version — experience, technical skills, professional and personal projects, and education.</p></div>
+  <div class="resume">
+    <div class="resumecard">
+      <div>
+        <p class="eyebrow">PDF · 2 pages · updated 2026</p>
+        <h3>Md Abrar Sami — Senior Software Engineer</h3>
+        <p>8+ years across enterprise frontend, Java/Spring Boot, C#/.NET and MS SQL. Currently building financial and construction management applications in React 18 and TypeScript at smartapp.com.</p>
+        <div class="actions">
+          <a class="btn primary" href="resume.html?print=1" target="_blank" rel="noopener">Download PDF ↓</a>
+          <a class="btn" href="resume.html" target="_blank" rel="noopener">View in browser →</a>
+          <a class="btn" href="mailto:mdabrarsami@gmail.com?subject=Resume%20request">Email me ↗</a>
+        </div>
+        <p class="resumenote">Download opens the résumé and your browser's print dialog — choose "Save as PDF" for an A4 copy.</p>
+      </div>
+      <div class="resumemeta">
+        <div><span>Location</span><strong>Hyderabad, India</strong></div>
+        <div><span>Notice period</span><strong>1 month</strong></div>
+        <div><span>Phone</span><strong><a href="tel:+919000120175">+91 90001 20175</a></strong></div>
+        <div><span>Email</span><strong><a href="mailto:mdabrarsami@gmail.com">mdabrarsami@gmail.com</a></strong></div>
+      </div>
+    </div>
+    <div class="resumelist">
+      <h3>What's inside</h3>
+      <p style="color:var(--muted);margin:0;font-size:14px">The same content as the PDF, in short.</p>
+      <ul>
+        <li><b>Smartapp.com — Senior Software Engineer</b> (May 2024 – present). Finance, Budget Manager, Estimate Manager, Client and Vendor Contract, Bid Manager, Version Manager and Cost Code Settings modules. Mentors 4–5 developers.</li>
+        <li><b>Centra Hub — Software Engineer / Full-Stack Developer</b> (May 2018 – May 2024). Technical consulting, MS SQL, C#/.NET, then full-stack Java.</li>
+        <li><b>Professional projects.</b> TSRTC logistics, Benelli dealer management, NCC project management, Hyndava Nimantran event management.</li>
+        <li><b>Personal projects.</b> Netflux network debugging platform, a 100+ tool offline PWA, Google Drive Explorer, LAN Messenger, LAN File Transfer.</li>
+        <li><b>AI-assisted engineering.</b> Claude Code, ChatGPT, GitHub Copilot and MCP workflows across React, PWAs, extensions and developer tools.</li>
+        <li><b>Education.</b> M.Sc. Computer Science, Osmania University Campus (2017). B.Sc. Computer Science, Osmania University (2015).</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="reveal" id="education">
+  <div class="head"><h2>Education.</h2><p>A computer-science foundation that predates the professional journey.</p></div>
+  <div class="timeline">
+    <div class="row"><div class="date">2017</div><div><h3>M.Sc. Computer Science</h3><div class="role">OSMANIA UNIVERSITY CAMPUS</div><p>Postgraduate study in Computer Science.</p></div><div class="arrow" aria-hidden="true">01</div></div>
+    <div class="row"><div class="date">2015</div><div><h3>B.Sc. Computer Science</h3><div class="role">OSMANIA UNIVERSITY — AFFILIATED</div><p>Undergraduate study in Computer Science.</p></div><div class="arrow" aria-hidden="true">02</div></div>
+    <div class="row"><div class="date">2012</div><div><h3>12th Science</h3><div class="role">BIE</div><p>Science stream.</p></div><div class="arrow" aria-hidden="true">03</div></div>
+    <div class="row"><div class="date">2010</div><div><h3>10th</h3><div class="role">SSC</div><p>Secondary education.</p></div><div class="arrow" aria-hidden="true">04</div></div>
+  </div>
+</section>
+
+<section class="reveal">
+  <div class="head"><h2>Beyond the résumé.</h2><p>The résumé shows professional delivery. My side projects show curiosity and a habit of building.</p></div>
+  <div class="cards">
+    <div class="card"><div class="num">BUILDING</div><h3>Browser Extensions</h3><p>Phone-number detection, network tooling, OCR, TOTP and other browser productivity experiments.</p></div>
+    <div class="card"><div class="num">AUTOMATION</div><h3>Developer Utilities</h3><p>Excel-to-JSON, query optimization and small utilities designed to remove repetitive work.</p></div>
+    <div class="card"><div class="num">PRODUCT THINKING</div><h3>Offline-first Tools</h3><p>Exploring PWAs that work well on desktop and mobile while keeping processing close to the user.</p></div>
+    <div class="card"><div class="num">EXPERIMENTING</div><h3>Desktop Apps</h3><p>Electron-based ideas for file management, transfer and developer workflows.</p></div>
+  </div>
+</section>
+
+<section class="reveal"><div class="now"><h2>Currently.</h2><p>Based in <b>Hyderabad, India</b>.<br><br>Working primarily with <b>React + TypeScript</b> for enterprise software, backed by <b>Java/Spring Boot and MS SQL</b> experience. I also build independent software tools and products using AI-assisted engineering workflows.</p></div></section>
+
+<section class="reveal"><div class="now"><h2>What I'm looking for.</h2><p><b>Target roles:</b> Senior React Developer, Senior Frontend Engineer, React + Java Full-Stack Developer, Full-Stack Java Developer, Software Engineer.<br><br><b>Preferred location:</b> Hyderabad, India &nbsp;·&nbsp; <b>Notice period:</b> 1 month.</p></div></section>
+
+<section id="contact" class="contact reveal">
+  <p class="eyebrow">Open to opportunities</p><h2>Let's build something useful.</h2><p>Open to Senior React, Senior Frontend, React + Java Full-Stack, Full-Stack Java and Software Engineer opportunities in Hyderabad. Notice period: <b>1 month</b>.</p>
+  <div class="actions"><a class="btn primary" href="mailto:mdabrarsami@gmail.com">Email me ↗</a><a class="btn" href="resume.html" target="_blank" rel="noopener">Résumé ↗</a><a class="btn" href="https://www.linkedin.com/in/mdabrarsami" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a><a class="btn" href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">GitHub ↗</a></div>
+</section>
+
+<footer><div>© 2026 Abrar Sami</div><div>mdabrarsami@gmail.com · Hyderabad · React · TypeScript · Java · SQL</div></footer>
+</div>
+
+<div class="modal" id="modal">
+  <div class="modalbox" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="iconbtn close" id="close" type="button" aria-label="Close dialog">✕</button>
+    <p class="eyebrow">Project</p>
+    <h2 id="modalTitle"></h2>
+    <p id="modalBody"></p>
+    <p><b>Engineering approach:</b> solve the real workflow first, keep the experience simple, and use the browser/device where it makes sense.</p>
+  </div>
+</div>
+
+<div class="command" id="command">
+  <div class="cmd" role="dialog" aria-modal="true" aria-label="Search portfolio">
+    <input id="cmdInput" type="text" autocomplete="off" spellcheck="false" placeholder="Search portfolio…" aria-label="Search portfolio">
+    <div id="cmdLinks">
+      <a href="#work">View projects</a>
+      <a href="#journey">View experience</a>
+      <a href="#stack">View technology stack</a>
+      <a href="#resume">Download résumé</a>
+      <a href="#contact">Contact Abrar</a>
+      <a href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">Open GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/mdabrarsami" target="_blank" rel="noopener noreferrer">Open LinkedIn ↗</a>
+    </div>
+    <p class="cmdempty" id="cmdEmpty" hidden>No matches.</p>
+  </div>
+</div>
+
+<script>
+document.documentElement.classList.add('js');
+
+/* Reveal on scroll */
+var io = new IntersectionObserver(function (entries) {
+  entries.forEach(function (e) {
+    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+  });
+}, { threshold: .08 });
+document.querySelectorAll('.reveal').forEach(function (el) { io.observe(el); });
+
+/* Shared overlay helpers */
+var modal = document.getElementById('modal');
+var command = document.getElementById('command');
+var input = document.getElementById('cmdInput');
+var cmdEmpty = document.getElementById('cmdEmpty');
+var lastFocus = null;
+
+function lockScroll() { document.body.style.overflow = 'hidden'; }
+function unlockScroll() {
+  if (!modal.classList.contains('open') && !command.classList.contains('open')) {
+    document.body.style.overflow = '';
+  }
+}
+function restoreFocus() {
+  if (lastFocus && typeof lastFocus.focus === 'function') lastFocus.focus();
+  lastFocus = null;
+}
+
+/* Project dialogs */
+var closeBtn = document.getElementById('close');
+document.querySelectorAll('.project').forEach(function (p) {
+  function openProject() {
+    lastFocus = p;
+    document.getElementById('modalTitle').textContent = p.dataset.title;
+    document.getElementById('modalBody').textContent = p.dataset.body;
+    modal.classList.add('open');
+    lockScroll();
+    closeBtn.focus();
+  }
+  p.addEventListener('click', openProject);
+  p.addEventListener('keydown', function (e) {
+    if (e.key === 'Enter' || e.key === ' ' || e.key === 'Spacebar') { e.preventDefault(); openProject(); }
+  });
+});
+function closeModal() {
+  if (!modal.classList.contains('open')) return;
+  modal.classList.remove('open');
+  unlockScroll();
+  restoreFocus();
+}
+closeBtn.addEventListener('click', closeModal);
+modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+
+/* Command palette */
+function openCommand() {
+  lastFocus = document.activeElement;
+  command.classList.add('open');
+  lockScroll();
+  input.value = '';
+  filterLinks();
+  input.focus();
+}
+function closeCommand() {
+  if (!command.classList.contains('open')) return;
+  command.classList.remove('open');
+  unlockScroll();
+  restoreFocus();
+}
+function filterLinks() {
+  var q = input.value.trim().toLowerCase();
+  var shown = 0;
+  document.querySelectorAll('#cmdLinks a').forEach(function (a) {
+    var hit = a.textContent.toLowerCase().indexOf(q) !== -1;
+    a.hidden = !hit;
+    if (hit) shown++;
+  });
+  cmdEmpty.hidden = shown > 0;
+}
+document.getElementById('cmdBtn').addEventListener('click', openCommand);
+command.addEventListener('click', function (e) { if (e.target === command) closeCommand(); });
+input.addEventListener('input', filterLinks);
+document.querySelectorAll('#cmdLinks a').forEach(function (a) {
+  a.addEventListener('click', function () { lastFocus = null; closeCommand(); });
+});
+
+document.addEventListener('keydown', function (e) {
+  if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === 'k') { e.preventDefault(); openCommand(); return; }
+  if (e.key === 'Escape') { closeCommand(); closeModal(); }
+});
+</script>
+</body>
+</html>
