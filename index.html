@@ -669,7 +669,7 @@ footer{background:var(--paper);position:relative;z-index:2}
   if (!hasGsap || reduce) return;
 
   function splitChars(el) {
-    el.setAttribute('aria-label', el.textContent.replace(/\s+/g, ' ').trim());
+    el.setAttribute('aria-label', [].map.call(el.querySelectorAll('.ln'), function (l) { return l.textContent.trim(); }).join(' '));
     el.querySelectorAll('.ln').forEach(function (ln) {
       ln.setAttribute('aria-hidden', 'true');
       ln.innerHTML = ln.textContent.split(' ').map(function (w) {
