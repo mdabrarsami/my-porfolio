@@ -3,9 +3,9 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="description" content="Md Abrar Sami, Senior Software Engineer in Hyderabad. React, TypeScript, Java, Spring Boot and MS SQL, plus eight live apps you can try.">
+<meta name="description" content="Abrar Sami, Senior Full Stack Engineer in Hyderabad. Java, Spring Boot and REST APIs, React and TypeScript, SQL Server, plus eight live apps you can try.">
 <meta name="theme-color" content="#1e1f1f">
-<title>Abrar Sami | Senior Software Engineer</title>
+<title>Abrar Sami | Senior Full Stack Engineer</title>
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='8' fill='%231e1f1f'/><text x='16' y='24' font-family='Arial Narrow,sans-serif' font-size='20' font-weight='700' fill='%23ff531f' text-anchor='middle'>A</text></svg>">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -17,7 +17,7 @@
   --accent:#ff531f;--t1:#ffe9e1;--t2:#ffc8b8;--t3:#ff9d80;--t4:#ff825c;
   --sans:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
   --cond:"Antonio","Oswald","Arial Narrow",sans-serif;
-  --pad:40px;--r:28px;--nav:68px;
+  --pad:40px;--r:28px;--nav:84px;
 }
 *,*::before,*::after{box-sizing:border-box}
 html{-webkit-text-size-adjust:100%}
@@ -38,7 +38,9 @@ button,input,textarea{font:inherit;color:inherit}
 .logo{font:600 24px/1 var(--cond);letter-spacing:.02em;text-transform:uppercase}
 .navlinks{display:flex;gap:clamp(24px,6vw,110px);font-size:17px}
 .navright{justify-self:end;display:flex;gap:18px;align-items:center;font-size:17px}
-.kbtn{border:1px solid rgba(255,255,255,.4);border-radius:99px;padding:5px 11px;font-size:12px;background:transparent;cursor:pointer}
+.kbtn{width:42px;height:42px;display:grid;place-items:center;border:1px solid rgba(255,255,255,.35);border-radius:50%;padding:0;background:transparent;color:#fff;cursor:pointer;transition:border-color .3s,transform .3s}
+.kbtn:hover{border-color:#fff;transform:scale(1.06)}
+.kbtn svg{width:18px;height:18px}
 
 /* Roll-up text for links and buttons */
 .roll{display:inline-flex;overflow:hidden;position:relative;vertical-align:top}
@@ -62,17 +64,18 @@ a:hover>.roll>span+span,button:hover>.roll>span+span{transform:translateY(0)}
 .grid4 span:first-child{border-left:0}
 .hline{position:absolute;left:0;right:0;border-top:1px solid rgba(255,255,255,.07)}
 .ghost{position:absolute;left:0;right:0;top:calc(var(--nav) + 4vh);display:flex;justify-content:center;font:600 min(38vw,60vh)/.8 var(--cond);letter-spacing:-.01em;color:rgba(255,255,255,.045);white-space:nowrap;user-select:none;pointer-events:none}
-.stack{position:absolute;left:50%;top:calc(var(--nav) + 6vh);width:min(40vw,560px);aspect-ratio:16/11;margin-left:calc(min(40vw,560px) / -2)}
+.stack{--sw:min(34vw,500px,calc((100svh - 470px) * 1.3));position:absolute;left:50%;top:calc(var(--nav) + 4vh);width:var(--sw);aspect-ratio:16/11;margin-left:calc(var(--sw) / -2)}
 .stack figure{position:absolute;inset:0;margin:0;border-radius:18px;overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.55);border:1px solid rgba(255,255,255,.1);background:#111}
 .stack figure img{width:100%;height:100%;object-fit:cover;object-position:top left}
-.stack .f1{transform:rotate(-9deg) translate(-26%,10%) scale(.82)}
-.stack .f2{transform:rotate(7deg) translate(26%,14%) scale(.82)}
+.stack .f1{transform:rotate(-8deg) translate(-24%,6%) scale(.8)}
+.stack .f2{transform:rotate(6deg) translate(24%,8%) scale(.8)}
+.scrim{position:absolute;left:0;right:0;bottom:0;height:58%;background:linear-gradient(180deg,rgba(30,31,31,0) 0%,rgba(30,31,31,.78) 45%,rgba(30,31,31,.94) 100%);pointer-events:none}
 .stack .f3{transform:rotate(-1.5deg)}
-.spec{position:absolute;left:var(--pad);top:42vh;margin:0;padding:0;list-style:none;font-size:18px;line-height:1.55}
+.spec{position:absolute;left:var(--pad);top:calc(var(--nav) + 16vh);margin:0;padding:0;list-style:none;font-size:18px;line-height:1.55}
 .heroh{position:absolute;left:var(--pad);bottom:44px;margin:0;font-weight:500;font-size:clamp(56px,9.3vw,148px);line-height:.95;letter-spacing:-.045em}
 .heroh .ln{display:block;overflow:hidden;padding-bottom:.06em}
 .heroh .ch{display:inline-block;will-change:transform}
-.heroside{position:absolute;right:var(--pad);bottom:48px;width:min(400px,30vw)}
+.heroside{position:absolute;right:var(--pad);bottom:48px;width:min(400px,30vw);text-shadow:0 2px 18px rgba(0,0,0,.45)}
 .heroside p{margin:0 0 26px;font-size:clamp(20px,2vw,31px);line-height:1.12;letter-spacing:-.01em}
 
 /* Sheets that slide over the hero */
@@ -244,7 +247,7 @@ footer{background:var(--paper);position:relative;z-index:2}
   :root{--pad:24px;--r:22px}
   .navlinks{display:none}
   .nav{grid-template-columns:1fr auto}
-  .stack{width:min(70vw,460px);margin-left:calc(min(70vw,460px) / -2);top:calc(var(--nav) + 4vh)}
+  .stack{--sw:min(70vw,440px,calc((100svh - 470px) * 1.45));top:calc(var(--nav) + 3vh)}
   .spec{display:none}
   .heroh{bottom:auto;top:50vh;font-size:clamp(52px,13vw,110px)}
   .heroside{left:var(--pad);right:var(--pad);width:auto;bottom:34px}
@@ -299,7 +302,7 @@ footer{background:var(--paper);position:relative;z-index:2}
     <a href="#journey" data-scroll><span class="roll"><span>Journey</span><span aria-hidden="true">Journey</span></span></a>
   </nav>
   <div class="navright">
-    <button class="kbtn" id="cmdBtn" type="button" aria-haspopup="dialog" aria-label="Open search">⌘K</button>
+    <button class="kbtn" id="cmdBtn" type="button" aria-haspopup="dialog" aria-label="Search the portfolio (Ctrl+K)" title="Search (Ctrl+K)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg></button>
     <a href="#contact" data-scroll><span class="roll"><span>Contact</span><span aria-hidden="true">Contact</span></span></a>
   </div>
 </header>
@@ -315,12 +318,13 @@ footer{background:var(--paper);position:relative;z-index:2}
       <figure class="f2"><img src="assets/apps/stackline.jpg" alt="" width="1565" height="784"></figure>
       <figure class="f3"><img src="assets/apps/astools.jpg" alt="" width="1565" height="784"></figure>
     </div>
+    <div class="scrim" aria-hidden="true"></div>
     <ul class="spec" id="spec">
-      <li>React + TypeScript</li><li>Java + Spring Boot</li><li>Microsoft SQL Server</li><li>PWAs and desktop apps</li>
+      <li>Java + Spring Boot</li><li>React + TypeScript</li><li>SQL Server + T-SQL</li><li>Extensions + Electron</li>
     </ul>
-    <h1 class="heroh" id="heroh"><span class="ln">Senior software</span><span class="ln">engineer</span></h1>
+    <h1 class="heroh" id="heroh"><span class="ln">Senior full stack</span><span class="ln">engineer</span></h1>
     <div class="heroside" id="heroside">
-      <p>I build enterprise React apps at smartapp.com, backed by 8+ years of Java, Spring Boot and SQL. On the side I ship apps you can open right now.</p>
+      <p>8+ years building web apps end to end, from Spring Boot backends to React frontends. Today I work on Smartapp's construction platform.</p>
       <a class="pillbtn" href="#apps" data-scroll><span class="roll"><span>See live apps</span><span aria-hidden="true">See live apps</span></span></a>
     </div>
   </div>
@@ -337,25 +341,25 @@ footer{background:var(--paper);position:relative;z-index:2}
         <div class="chips">
           <div class="dots" aria-hidden="true"><span style="background:#61a8ff">R</span><span style="background:#3178c6">TS</span><span style="background:#e76f00">J</span><span style="background:#cc2927">SQL</span><span style="background:var(--ink)">8+</span></div>
         </div>
-        <div class="label">Years building enterprise software</div>
+        <div class="label">Years building web apps end to end</div>
         <div class="stars" aria-hidden="true">★★★★★</div>
-        <p class="wordreveal" id="wordreveal">I started in technical consulting, went deep on SQL, then C#, then full-stack Java. Today I build data-heavy React interfaces for construction and finance teams, and I still care about how the database underneath them works.</p>
+        <p class="wordreveal" id="wordreveal">Six years designing REST APIs and business logic in Java and Spring Boot, writing T-SQL against SQL Server and building React UIs. The last two and a half on React and TypeScript product work and internal tooling for a construction management platform.</p>
       </div>
     </div>
 
     <div class="bento">
       <div class="bcard reveal">
         <div>
-          <h3>Interfaces that save people time</h3>
-          <p class="sub">Responsive UI for a construction management platform, plus automated workflows that cut out repetitive data entry.</p>
+          <h3>A construction SaaS used by 100+ people</h3>
+          <p class="sub">Budget Manager, Forecast 3.0, Bid Manager, contracts, pay applications and change events, with multi-currency and sub-project support.</p>
         </div>
-        <div class="who"><div class="avatar">S</div><div><b>smartapp.com</b><span>Senior Software Engineer, 2024 to now</span></div></div>
+        <div class="who"><div class="avatar">S</div><div><b>Smartapp</b><span>Senior Software Engineer, May 2024 to now</span></div></div>
       </div>
       <div class="bcard reveal">
         <div class="facthead"><span class="label">Fact 01</span><span class="trend" aria-hidden="true">↗</span></div>
         <div>
-          <div class="fact"><span data-count="30">30</span><small>%</small></div>
-          <p class="sub">Less data entry time after the automated workflows I built at smartapp.com</p>
+          <div class="fact"><span data-count="90">90</span><small>%</small></div>
+          <p class="sub">Less processing time on key Smartapp workflows I optimised, with page loads brought down to near-instant</p>
         </div>
       </div>
       <a class="bcard photo reveal" href="https://tools.abrlabs.in" target="_blank" rel="noopener noreferrer">
@@ -365,19 +369,19 @@ footer{background:var(--paper);position:relative;z-index:2}
       <div class="bcard wide reveal">
         <div style="display:flex;flex-direction:column;justify-content:space-between;gap:30px">
           <div>
-            <h3>A path across the whole stack</h3>
-            <p class="sub">Consulting, SQL, C#, Java and React. Each step added a layer, so I can follow a bug from the grid on screen down to the stored procedure.</p>
+            <h3>Backend first, then the whole stack</h3>
+            <p class="sub">Java services, REST APIs and T-SQL on government, automotive and construction systems, then React and TypeScript product work. I can follow a bug from the grid on screen down to the stored procedure.</p>
           </div>
           <a class="arrowlink" href="#journey" data-scroll><i>↗</i> See the journey</a>
         </div>
         <div class="tl">
-          <div class="tlhead"><b>Career timeline</b><span>Technical consulting to senior engineer</span></div>
+          <div class="tlhead"><b>Career timeline</b><span>Centra Hub to Smartapp</span></div>
           <div class="tlgrid" id="tlgrid">
-            <span class="tlpill" style="left:0;top:4%;background:var(--t1)">Consultant</span>
-            <span class="tlpill" style="left:12%;top:23%;background:var(--t2)">SQL Developer</span>
-            <span class="tlpill" style="left:28%;top:42%;background:var(--t3)">C# Developer</span>
-            <span class="tlpill" style="left:40%;top:61%;background:var(--t4)">Java Full-Stack</span>
-            <span class="tlpill" style="right:0;top:80%;background:var(--accent);color:#fff">Senior Engineer</span>
+            <span class="tlpill" style="left:0;top:4%;background:var(--t1)">Centra Hub</span>
+            <span class="tlpill" style="left:6%;top:23%;background:var(--t2)">Benelli CRM</span>
+            <span class="tlpill" style="left:14%;top:42%;background:var(--t3)">NCC</span>
+            <span class="tlpill" style="left:46%;top:61%;background:var(--t4)">TSRTC</span>
+            <span class="tlpill" style="right:0;top:80%;background:var(--accent);color:#fff">Smartapp</span>
           </div>
           <div class="tlaxis"><span>2018</span><span>2020</span><span>2022</span><span>2024</span><span>Now</span></div>
         </div>
@@ -386,7 +390,7 @@ footer{background:var(--paper);position:relative;z-index:2}
         <div class="facthead"><span class="label">Fact 02</span><span class="trend" aria-hidden="true">↗</span></div>
         <div>
           <div class="fact"><span data-count="2200">2,200</span><small>+</small></div>
-          <p class="sub">Commits to smartapp.com's construction platform since May 2024</p>
+          <p class="sub">Commits to Smartapp's construction management platform since May 2024</p>
         </div>
       </div>
     </div>
@@ -410,7 +414,7 @@ footer{background:var(--paper);position:relative;z-index:2}
       </a>
       <a class="pcard" href="https://hospixcare.netlify.app" target="_blank" rel="noopener noreferrer" data-cursor="Demo ↗">
         <div class="pframe"><img src="assets/apps/hospix.jpg" alt="Hospix hospital dashboard" width="1536" height="770" loading="lazy"><span class="purl">hospixcare.netlify.app</span></div>
-        <h3>Hospix</h3><p>Hospital management: patients, medical records, receipts and billing, with a daily dashboard.</p>
+        <h3>Hospix</h3><p>Hospital management with server-side GST billing, role-based permissions and Ed25519-signed licensing, covered by 160 tests.</p>
         <div class="ptags"><span>React</span><span>NestJS</span><span>SQLite</span><span>Drizzle</span><span>Docker</span></div>
       </a>
       <a class="pcard" href="https://games.abrlabs.in" target="_blank" rel="noopener noreferrer" data-cursor="Play ↗">
@@ -442,10 +446,10 @@ footer{background:var(--paper);position:relative;z-index:2}
 
     <div class="morerow"><span aria-hidden="true">⊹</span><hr><a class="arrowlink" href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer"><i>↗</i> More on GitHub</a></div>
     <div class="lab">
-      <div class="reveal"><b>NetFlux</b><p>Chrome MV3 tool for request rewriting, CORS, traffic logs, TOTP, OCR and screen capture.</p><small>React 18 · TypeScript</small></div>
-      <div class="reveal"><b>Enclave</b><p>Offline-first encrypted LAN messenger with peer discovery and resumable transfers.</p><small>Tauri 2 · Rust · SQLite</small></div>
-      <div class="reveal"><b>Remote Transfer Manager</b><p>Browse and move files on Windows servers over SMB and WinRM, with no agent.</p><small>Electron · TypeScript</small></div>
-      <div class="reveal"><b>Team tooling</b><p>Bug-workflow UI, two Chrome extensions and a client-side image upscaler at smartapp.com.</p><small>TypeScript · ONNX Runtime Web</small></div>
+      <div class="reveal"><b>NetFlux</b><p>Requestly-style Chrome extension: declarativeNetRequest rule engine, mock, redirect and map-local, a CORS engine, and a virtualised network log with CDP capture and HAR export.</p><small>React 18 · TypeScript · MV3</small></div>
+      <div class="reveal"><b>DentOS</b><p>Multi-tenant dental clinic SaaS with JWT, Argon2 and TOTP auth, bitmask RBAC and an append-only audit log.</p><small>NestJS · PostgreSQL RLS · Redis · Docker</small></div>
+      <div class="reveal"><b>Git Chat</b><p>AI agent extension for VS Code and Cursor, with tool calling across Groq, OpenAI and OpenAI-compatible providers.</p><small>TypeScript · VS Code API</small></div>
+      <div class="reveal"><b>Also built</b><p>Git Advanced (Electron Git client), Enclave (Tauri + Rust encrypted LAN messenger) and Go Photos (offline PWA).</p><small>Electron · Tauri · Rust · PWA</small></div>
     </div>
   </div>
 </section>
@@ -455,15 +459,15 @@ footer{background:var(--paper);position:relative;z-index:2}
     <div class="svc">
       <div class="label">Stack</div>
       <div>
-        <h2 id="stackTitle" class="splitwords">A practical stack across frontend, backend and data, picked up one job at a time.</h2>
+        <h2 id="stackTitle" class="splitwords">Java and Spring Boot on the server, React and TypeScript in the browser, SQL Server underneath.</h2>
         <a class="arrowlink" href="resume.html" target="_blank" rel="noopener"><i>↗</i> Read the résumé</a>
       </div>
     </div>
     <div class="svccols">
-      <div class="reveal"><h3>Frontend</h3><ul><li>React 18</li><li>TypeScript</li><li>Redux + Context</li><li>MUI + AG Grid</li><li>Chart.js + i18next</li><li>PWAs + extensions</li></ul></div>
-      <div class="reveal"><h3>Backend</h3><ul><li>Java</li><li>Spring Boot + MVC</li><li>REST APIs</li><li>C# / .NET</li><li>NestJS</li><li>Electron + Tauri</li></ul></div>
-      <div class="reveal"><h3>Data</h3><ul><li>MS SQL Server</li><li>T-SQL + procedures</li><li>Query tuning</li><li>Reporting</li><li>SQLite + IndexedDB</li><li>MySQL + PostgreSQL</li></ul></div>
-      <div class="reveal"><h3>Delivery</h3><ul><li>Git + code review</li><li>Docker</li><li>Netlify + CI/CD</li><li>Production debugging</li><li>Agile / Scrum</li><li>Claude Code + MCP</li></ul></div>
+      <div class="reveal"><h3>Backend</h3><ul><li>Java</li><li>Spring Boot</li><li>Spring MVC</li><li>REST APIs</li><li>OOP</li><li>NestJS</li></ul></div>
+      <div class="reveal"><h3>Frontend</h3><ul><li>React</li><li>TypeScript</li><li>JavaScript (ES6+)</li><li>Material-UI</li><li>HTML5 + CSS / SCSS</li><li>jQuery</li></ul></div>
+      <div class="reveal"><h3>Data</h3><ul><li>Microsoft SQL Server</li><li>T-SQL</li><li>Stored procedures</li><li>Query optimisation</li><li>Crystal Reports</li><li>PostgreSQL + SQLite</li></ul></div>
+      <div class="reveal"><h3>Tooling</h3><ul><li>Git</li><li>Vite</li><li>Chrome extensions (MV3)</li><li>Electron</li><li>VS Code extensions</li><li>Agile + AI coding tools</li></ul></div>
     </div>
   </div>
 </section>
@@ -477,11 +481,11 @@ footer{background:var(--paper);position:relative;z-index:2}
         <a class="arrowlink" href="resume.html" target="_blank" rel="noopener"><i>↗</i> Full résumé</a>
       </div>
       <div class="qas">
-        <div class="qa"><button type="button" aria-expanded="false">smartapp.com construction platform<em>01</em></button><div class="ans"><div><p>Finance and project modules in React 18 and TypeScript: Budget Manager, Forecast 3.0 and the Forecast Simulator, Estimates, Bid Manager, client and vendor contracts, version manager and cost codes. Responsive UI work raised user satisfaction by 25%, automated workflows cut data entry time by 30%, and refactoring plus caching improved performance by 20%. I also mentor 4 to 5 developers.</p><div class="tags"><span>React 18</span><span>TypeScript</span><span>Redux</span><span>MUI</span><span>AG Grid</span></div></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Logistics management for TSRTC<em>02</em></button><div class="ans"><div><p>Architect and full-stack developer on logistics management for the Telangana State road transport corporation, working across React screens, Spring Boot services and REST integration, with JWT security and JMeter load testing.</p><div class="tags"><span>Spring Boot</span><span>React</span><span>JWT</span><span>JMeter</span></div></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Dealer management for Benelli<em>03</em></button><div class="ans"><div><p>Dealer management functionality across frontend workflows, Spring Boot services and MS SQL-backed business operations.</p><div class="tags"><span>Spring Boot</span><span>MS SQL</span><span>JavaScript</span></div></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Project management for NCC<em>04</em></button><div class="ans"><div><p>Project management workflows and dashboards for Nagarjuna Construction Company, built on React, Spring Boot and MS SQL.</p><div class="tags"><span>Spring Boot</span><span>MS SQL</span><span>Dashboards</span></div></div></div></div>
-        <div class="qa"><button type="button" aria-expanded="false">Centra Hub reporting and migration<em>05</em></button><div class="ans"><div><p>Reporting that reduced manual analysis time by 50%, query optimisation that improved performance by 30%, and support for a legacy-to-cloud migration that lowered platform cost by 20%.</p><div class="tags"><span>MS SQL</span><span>Crystal Reports</span><span>C#</span></div></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Smartapp construction management SaaS<em>01</em></button><div class="ans"><div><p>React and TypeScript features for a construction SaaS used by 100+ people, with 2,200+ commits since May 2024. The finance suite covers Budget Manager, Forecast 3.0 and the Forecast Simulator, Estimates, Bid Manager, client and vendor contracts, pay applications (schedule of values, auto-save) and change events, with multi-currency and sub-project support. I also built the Document Smart Folder grid with in-grid editing, Manage Roles and Project Team permission screens, scheduling UI on Gantt and calendar components, real-time presence and comment streams, i18n tooling with a translation memory, and the View Builder, Skill Studio, Safety Permits and Digital ID modules. Optimising key workflows cut processing time by 90%.</p><div class="tags"><span>React</span><span>TypeScript</span><span>Material-UI</span><span>SCSS</span></div></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Internal tools at Smartapp<em>02</em></button><div class="ans"><div><p>Bug Workflow, a UI for bug triage, scheduling and time tracking; the Smartapp Tag Creator and BambooHR Timesheet Helper Chrome extensions; and a client-side image upscaling library.</p><div class="tags"><span>TypeScript</span><span>Chrome MV3</span><span>JavaScript</span></div></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">TSRTC logistics management system<em>03</em></button><div class="ans"><div><p>For the Telangana State Road Transport Corporation, 2022 to 2024: a Java and Spring Boot backend, an MSSQL data layer and the web UI.</p><div class="tags"><span>Java</span><span>Spring Boot</span><span>SQL Server</span></div></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">Benelli CRM<em>04</em></button><div class="ans"><div><p>2018 to 2024: every module from inquiry to sales, including location-wise stock tracking, plus optimisation of the SQL procedures and functions behind them.</p><div class="tags"><span>Java</span><span>T-SQL</span><span>SQL Server</span></div></div></div></div>
+        <div class="qa"><button type="button" aria-expanded="false">NCC and Centra Hub platform work<em>05</em></button><div class="ans"><div><p>Customised software modules for Nagarjuna Construction Company in 2019. Across Centra Hub I built backend services and REST APIs with Spring Boot and Spring MVC, wrote T-SQL, stored procedures and Crystal Reports on SQL Server, and built frontends with React, JavaScript, Bootstrap, jQuery and Ajax.</p><div class="tags"><span>Spring MVC</span><span>Crystal Reports</span><span>React</span><span>jQuery</span></div></div></div></div>
       </div>
     </div>
   </div>
@@ -491,15 +495,15 @@ footer{background:var(--paper);position:relative;z-index:2}
   <div class="inner" style="padding-bottom:0">
     <div class="jhead">
       <div class="label">2018 to now</div>
-      <div><h2 id="journeyTitle">Journey</h2><p class="sub" style="max-width:430px">Five roles, each one a layer deeper into how enterprise software fits together.</p></div>
+      <div><h2 id="journeyTitle">Journey</h2><p class="sub" style="max-width:430px">Six years of Java, Spring Boot and SQL Server on client systems, then React and TypeScript product work.</p></div>
     </div>
   </div>
   <div class="bands">
-    <article class="band" style="--i:0"><div class="bandtop"><h3>Technical Consultant</h3><b>01</b></div><div class="bandbody"><div class="when">Centra Hub · about 1.5 years</div><div><p>Started in technical consulting, learning how requirements, users and enterprise delivery connect.</p><div class="row"><span>Requirements</span><span>Client delivery</span></div></div></div></article>
-    <article class="band" style="--i:1"><div class="bandtop"><h3>SQL Developer</h3><b>02</b></div><div class="bandbody"><div class="when">Centra Hub · about 1.5 years</div><div><p>Went deep into Microsoft SQL: stored procedures, views, reporting and query optimisation.</p><div class="row"><span>T-SQL</span><span>Crystal Reports</span><span>Query tuning</span></div></div></div></article>
-    <article class="band" style="--i:2"><div class="bandtop"><h3>C# Developer</h3><b>03</b></div><div class="bandbody"><div class="when">Centra Hub · about 1 year</div><div><p>Moved into application development and strengthened programming and backend fundamentals.</p><div class="row"><span>C#</span><span>.NET</span></div></div></div></article>
-    <article class="band" style="--i:3"><div class="bandtop"><h3>Java Full-Stack Developer</h3><b>04</b></div><div class="bandbody"><div class="when">Centra Hub · to May 2024</div><div><p>Full-stack Java across enterprise systems for TSRTC, Benelli and NCC, using Spring Boot, React, REST APIs and MS SQL.</p><div class="row"><span>Java</span><span>Spring Boot</span><span>React</span><span>REST</span></div></div></div></article>
-    <article class="band" style="--i:4"><div class="bandtop"><h3>Senior Software Engineer</h3><b>05</b></div><div class="bandbody"><div class="when">smartapp.com · May 2024 to now</div><div><p>React 18 and TypeScript for finance and construction management, internal tooling for the team, and mentoring 4 to 5 developers.</p><div class="row"><span>React 18</span><span>TypeScript</span><span>AG Grid</span><span>Mentoring</span></div></div></div></article>
+    <article class="band" style="--i:0"><div class="bandtop"><h3>Software Engineer (Full Stack)</h3><b>01</b></div><div class="bandbody"><div class="when">Centra Hub · Mar 2018</div><div><p>Joined Centra Hub in Hyderabad, building backend services and REST APIs in Java with Spring Boot and Spring MVC, and writing T-SQL, stored procedures and Crystal Reports on SQL Server.</p><div class="row"><span>Java</span><span>Spring Boot</span><span>T-SQL</span></div></div></div></article>
+    <article class="band" style="--i:1"><div class="bandtop"><h3>Benelli CRM</h3><b>02</b></div><div class="bandbody"><div class="when">2018 to 2024</div><div><p>Developed every module from inquiry to sales, including location-wise stock tracking, and optimised the SQL procedures and functions underneath.</p><div class="row"><span>CRM</span><span>Stock tracking</span><span>SQL tuning</span></div></div></div></article>
+    <article class="band" style="--i:2"><div class="bandtop"><h3>Nagarjuna Construction Company</h3><b>03</b></div><div class="bandbody"><div class="when">2019</div><div><p>Customised software modules to the client's requirements.</p><div class="row"><span>Client modules</span><span>Construction</span></div></div></div></article>
+    <article class="band" style="--i:3"><div class="bandtop"><h3>TSRTC logistics</h3><b>04</b></div><div class="bandbody"><div class="when">2022 to 2024</div><div><p>A logistics management system for the Telangana State Road Transport Corporation: Java and Spring Boot backend, MSSQL data layer and web UI.</p><div class="row"><span>Government</span><span>Spring Boot</span><span>MSSQL</span></div></div></div></article>
+    <article class="band" style="--i:4"><div class="bandtop"><h3>Senior Software Engineer</h3><b>05</b></div><div class="bandbody"><div class="when">Smartapp · May 2024 to now</div><div><p>React and TypeScript features for a construction SaaS used by 100+ people, 2,200+ commits, and internal tools for the team.</p><div class="row"><span>React</span><span>TypeScript</span><span>Material-UI</span><span>Chrome extensions</span></div></div></div></article>
   </div>
 </section>
 
@@ -509,10 +513,10 @@ footer{background:var(--paper);position:relative;z-index:2}
     <div class="shead"><h2 id="statsTitle">Stats<br>&amp; facts</h2><p class="sub" style="color:var(--muted2)">The numbers behind the work.</p></div>
     <div class="s3 cell"><div class="snum"><span data-count="196">196</span></div><h3>On-device tools</h3><p>Shipped in ASTools, all processing files locally in the browser.</p></div>
     <div class="sblank" aria-hidden="true"></div>
-    <div class="s1 cell"><div class="snum"><span data-count="8">8</span>+</div><h3>Years of experience</h3><p>Consulting, SQL, C#, Java and React across enterprise teams.</p></div>
+    <div class="s1 cell"><div class="snum"><span data-count="8">8</span>+</div><h3>Years of experience</h3><p>Spring Boot backends, SQL Server and React frontends.</p></div>
     <div class="s2 cell"><div class="snum"><span data-count="8">8</span></div><h3>Live apps and sites</h3><p>Public, hosted, and linked above. Open any of them.</p></div>
     <div class="sblank2" aria-hidden="true"></div>
-    <div class="s4 cell"><div class="snum"><span data-count="739">739</span></div><h3>Lessons in Stackline</h3><p>Across 17 tracks, with 6,368 interview questions answered.</p></div>
+    <div class="s4 cell"><div class="snum"><span data-count="100">100</span>+</div><h3>Platform users</h3><p>People using the Smartapp construction SaaS I build for.</p></div>
   </div>
 </section>
 
@@ -522,7 +526,7 @@ footer{background:var(--paper);position:relative;z-index:2}
       <div>
         <h2 id="contactTitle">Let's build<br>something</h2>
         <a class="mail" href="mailto:mdabrarsami@gmail.com"><span class="roll"><span>mdabrarsami@gmail.com</span><span aria-hidden="true">mdabrarsami@gmail.com</span></span></a>
-        <div class="meta"><a href="tel:+919000120175">+91 90001 20175</a><br>Hyderabad, India · notice period 1 month<br>Open to Senior React, Senior Frontend and React + Java full-stack roles</div>
+        <div class="meta"><a href="tel:+919000120175">+91 90001 20175</a><br>Hyderabad, India · notice period 1 month<br>Open to Senior Full Stack (Java + React) and Senior React roles</div>
         <div class="social"><a href="https://www.linkedin.com/in/mdabrarsami" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">GitHub</a><a href="resume.html" target="_blank" rel="noopener">Résumé</a></div>
       </div>
       <form class="form" id="form">
@@ -541,7 +545,7 @@ footer{background:var(--paper);position:relative;z-index:2}
   <div class="fcols">
     <div><h4>Links</h4><ul><li><a href="#apps" data-scroll>Apps</a></li><li><a href="#stack" data-scroll>Stack</a></li><li><a href="#work" data-scroll>Work</a></li><li><a href="#journey" data-scroll>Journey</a></li><li><a href="#contact" data-scroll>Contact</a></li></ul></div>
     <div><h4>Get in touch</h4><ul><li><a href="mailto:mdabrarsami@gmail.com">mdabrarsami@gmail.com</a></li><li><a href="tel:+919000120175">+91 90001 20175</a></li><li>Hyderabad</li></ul></div>
-    <div class="resumebox"><h3>Résumé</h3><p>Two pages: experience, skills, projects and education. Prints to an A4 PDF.</p><a class="pillbtn" href="resume.html?print=1" target="_blank" rel="noopener"><span class="roll"><span>Download PDF</span><span aria-hidden="true">Download PDF</span></span></a></div>
+    <div class="resumebox"><h3>Résumé</h3><p>One page: summary, skills, experience, projects and education. Updated November 2026.</p><div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap"><a class="pillbtn" href="assets/Abrar_Sami_Resume.pdf" download="Abrar_Sami_Resume.pdf"><span class="roll"><span>Download PDF</span><span aria-hidden="true">Download PDF</span></span></a><a class="arrowlink" href="resume.html" target="_blank" rel="noopener"><i>↗</i> View online</a></div></div>
   </div>
   <div class="marquee" aria-hidden="true"><div class="mtrack" id="mtrack"><span>ABRAR SAMI<i></i></span><span>ABRAR SAMI<i></i></span><span>ABRAR SAMI<i></i></span><span>ABRAR SAMI<i></i></span></div></div>
   <div class="bars" aria-hidden="true"><span></span><span></span><span></span><span></span></div>
@@ -564,6 +568,7 @@ footer{background:var(--paper);position:relative;z-index:2}
       <a href="#work" data-scroll>Professional work</a>
       <a href="#journey" data-scroll>Career journey</a>
       <a href="resume.html" target="_blank" rel="noopener">Résumé ↗</a>
+      <a href="assets/Abrar_Sami_Resume.pdf" download>Download résumé PDF ↓</a>
       <a href="#contact" data-scroll>Contact</a>
       <a href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
       <a href="https://www.linkedin.com/in/mdabrarsami" target="_blank" rel="noopener noreferrer">LinkedIn ↗</a>
