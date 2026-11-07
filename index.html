@@ -78,6 +78,9 @@ section{padding:90px 0;border-bottom:1px solid var(--line)}
 .tags{display:flex;gap:6px;flex-wrap:wrap;margin-top:20px;max-width:100%}
 .tag{font-size:10px;color:#aeb6c2;border:1px solid var(--line);padding:5px 9px;border-radius:99px;white-space:nowrap}
 .project .open{color:var(--accent);font-weight:800;font-size:12px}
+.project.live .kbd{color:var(--accent);border-color:#3a4630;max-width:60%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.subhead{font-size:24px;letter-spacing:-.04em;margin:56px 0 4px}
+.subnote{color:var(--muted);margin:0 0 20px}
 
 .public{background:linear-gradient(120deg,#11151b,#0e1115);border:1px solid var(--line);border-radius:22px;padding:25px;margin-top:14px;display:flex;justify-content:space-between;gap:20px;align-items:center}
 .public>*{min-width:0}.public p{color:var(--muted);margin:4px 0 0}.public a{color:var(--accent);font-weight:800}
@@ -193,7 +196,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
   <div class="wrap">
     <a class="logo" href="#">ABRAR<span>.</span></a>
     <nav class="navlinks" aria-label="Primary">
-      <a href="#work">Work</a><a href="#journey">Journey</a><a href="#stack">Stack</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
+      <a href="#work">Apps</a><a href="#journey">Journey</a><a href="#stack">Stack</a><a href="#resume">Résumé</a><a href="#contact">Contact</a>
     </nav>
     <div class="navright">
       <button class="iconbtn" id="cmdBtn" type="button" aria-haspopup="dialog">⌘K</button>
@@ -209,7 +212,7 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
     <p class="eyebrow">Software Engineer · Hyderabad, India</p>
     <h1>I build software that makes <span>complicated things simple.</span></h1>
     <p class="lead">I'm Abrar Sami — a Senior Software Engineer and Full-Stack Developer with <b>8+ years of professional experience</b> spanning enterprise frontend development, Java/Spring Boot, C#/.NET, MS SQL, REST APIs and database-driven applications. I currently focus on React + TypeScript for enterprise software while keeping my Java and SQL foundation strong.</p>
-    <div class="actions"><a class="btn primary" href="#work">Explore my work ↓</a><a class="btn" href="#resume">Résumé →</a></div>
+    <div class="actions"><a class="btn primary" href="#work">See live apps ↓</a><a class="btn" href="#resume">Résumé →</a></div>
   </div>
   <aside class="hero-card reveal">
     <div class="avatar" aria-hidden="true">AS</div>
@@ -220,14 +223,14 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
 </main>
 </div>
 
-<div class="ticker" aria-hidden="true"><div class="track"><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>REACT</span><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>REACT</span></div></div>
+<div class="ticker" aria-hidden="true"><div class="track"><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>NESTJS</span><b>REACT</b><span>TYPESCRIPT</span><b>JAVA</b><span>SQL</span><b>PWAs</b><span>ELECTRON</span><b>PRODUCT ENGINEERING</b><span>NESTJS</span></div></div>
 
 <div class="wrap">
 <section class="reveal">
   <div class="head"><h2>By the numbers.</h2><p>A quick snapshot of the engineering path behind the portfolio.</p></div>
   <div class="stats">
     <div class="stat"><strong>8+</strong><span>Years professional software development experience</span></div>
-    <div class="stat"><strong>10</strong><span>Highlighted professional + personal projects</span></div>
+    <div class="stat"><strong>8</strong><span>Live apps and sites, all linked below</span></div>
     <div class="stat"><strong>2</strong><span>Computer Science degrees</span></div>
     <div class="stat"><strong>3</strong><span>Languages: English · Hindi · Telugu</span></div>
   </div>
@@ -250,24 +253,32 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
     <div class="row"><div class="date">NEXT</div><div><h3>SQL Developer</h3><div class="role">~1.5 YEARS</div><p>Moved deep into Microsoft SQL development and developed a strong data and database problem-solving foundation.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
     <div class="row"><div class="date">THEN</div><div><h3>C# Developer</h3><div class="role">~1 YEAR</div><p>Expanded into application development and strengthened programming and backend fundamentals.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
     <div class="row"><div class="date">FULL STACK</div><div><h3>Java Full-Stack Developer</h3><div class="role">CENTRA HUB · HYDERABAD</div><p>Moved into full-stack Java development using Java, Spring, Spring Boot, JavaScript, React, REST APIs and MS SQL across enterprise applications.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
-    <div class="row"><div class="date">MAY 2024 — PRESENT</div><div><h3>Senior Software Engineer</h3><div class="role">SMARTAPP.COM · HYDERABAD</div><p>Focused on React 18, TypeScript, JavaScript, Redux, Context API, MUI, AG Grid and REST APIs for enterprise financial and construction management applications.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
+    <div class="row"><div class="date">MAY 2024 — PRESENT</div><div><h3>Senior Software Engineer</h3><div class="role">SMARTAPP.COM · HYDERABAD</div><p>Building React 18 + TypeScript features for a construction management platform: Budget Manager, Forecast 3.0 and the Forecast Simulator, Estimates, Bid Manager, contracts and document modules, with Redux, MUI, AG Grid and REST APIs. 2,200+ commits since May 2024. I also build internal tooling for the team, including a bug-workflow automation UI, Chrome extensions and a client-side image upscaling library.</p></div><div class="arrow" aria-hidden="true">↗</div></div>
   </div>
 </section>
 
 <section id="work" class="reveal">
-  <div class="head"><h2>Things I've built.</h2><p>Most professional work is private. These are representative product experiments and public projects.</p></div>
+  <div class="head"><h2>Live apps.</h2><p>Side projects I've built and shipped. All of them are live, so open one and try it.</p></div>
   <div class="projects">
-    <article class="card project" role="button" tabindex="0" data-title="ABR Labs Tools" data-body="A multi-tool PWA concept built around fast browser utilities, offline capability, mobile usability and a native-app feel."><div><div class="projecttop"><div class="num">01</div><span class="kbd">DETAILS</span></div><h3>ABR Labs Tools</h3><p>A collection of browser-based utilities designed around a fast, mobile-friendly, offline-capable PWA experience.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">PWA</span><span class="tag">Offline-first</span></div></div><div class="open">Explore concept →</div>
+    <a class="card project live" href="https://tools.abrlabs.in" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">01 / PWA</div><span class="kbd">tools.abrlabs.in ↗</span></div><h3>ASTools</h3><p>196 browser tools in one installable PWA: PDF, image, video, audio, developer, security, finance and fitness utilities. Files are processed on your device and never uploaded.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">PWA</span><span class="tag">IndexedDB</span><span class="tag">WebRTC</span></div></div><div class="open">Open app ↗</div></a>
+    <a class="card project live" href="https://dsa-book.netlify.app" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">02 / LEARNING</div><span class="kbd">dsa-book.netlify.app ↗</span></div><h3>Stackline</h3><p>Offline interview prep for full-stack engineers: 739 lessons across 17 tracks (Java, Spring Boot, microservices, system design, React, DSA, SQL), 6,368 interview Q&amp;As, quizzes and interactive diagrams.</p><div class="tags"><span class="tag">JavaScript</span><span class="tag">PWA</span><span class="tag">Service Worker</span><span class="tag">Offline-first</span></div></div><div class="open">Open app ↗</div></a>
+    <a class="card project live" href="https://hospixcare.netlify.app" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">03 / FULL STACK</div><span class="kbd">hospixcare.netlify.app ↗</span></div><h3>Hospix</h3><p>Hospital management system covering patient registration, medical records, receipts and billing, with a dashboard for daily totals and outstanding amounts.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">NestJS</span><span class="tag">SQLite</span><span class="tag">Drizzle</span><span class="tag">Docker</span></div></div><div class="open">Open demo ↗</div></a>
+    <a class="card project live" href="https://games.abrlabs.in" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">04 / REALTIME</div><span class="kbd">games.abrlabs.in ↗</span></div><h3>Paper Games</h3><p>Pen-and-paper games you play live with friends. Rooms, turns and moves sync in real time across phones and desktops.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Supabase Realtime</span><span class="tag">PWA</span><span class="tag">Vitest</span></div></div><div class="open">Play ↗</div></a>
+    <a class="card project live" href="https://drive.abrlabs.in" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">05 / DESKTOP</div><span class="kbd">drive.abrlabs.in ↗</span></div><h3>Drive Explorer</h3><p>A Windows desktop app that shows Google Drive in a File Explorer layout: navigation pane, breadcrumbs, cut/copy/paste, drag-and-drop uploads and the usual keyboard shortcuts. In private testing.</p><div class="tags"><span class="tag">Electron</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Google Drive API</span></div></div><div class="open">Visit site ↗</div></a>
+    <a class="card project live" href="https://evadental.in" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">06 / CLIENT WORK</div><span class="kbd">evadental.in ↗</span></div><h3>Eva Dental</h3><p>Website for a dental and maxillofacial clinic in Narsingi, Hyderabad, with treatment pages, FAQs and appointment booking, built with local SEO in mind.</p><div class="tags"><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Vite</span><span class="tag">SEO</span></div></div><div class="open">Visit site ↗</div></a>
+    <a class="card project live" href="https://torrent-download.netlify.app" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">07 / P2P</div><span class="kbd">torrent-download.netlify.app ↗</span></div><h3>Torrents</h3><p>A torrent client that runs entirely in the browser. Peers connect over WebRTC and HTTP web seeds, with no server in between.</p><div class="tags"><span class="tag">TypeScript</span><span class="tag">WebTorrent</span><span class="tag">WebRTC</span></div></div><div class="open">Open app ↗</div></a>
+    <a class="card project live" href="https://abrlabs.in" target="_blank" rel="noopener noreferrer"><div><div class="projecttop"><div class="num">08 / THIS SITE</div><span class="kbd">abrlabs.in ↗</span></div><h3>abrlabs.in</h3><p>This portfolio. A single hand-written HTML file with no framework, plus a printable A4 résumé page.</p><div class="tags"><span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span><span class="tag">Netlify</span></div></div><div class="open">You're here</div></a>
+  </div>
+  <h3 class="subhead">In the lab</h3>
+  <p class="subnote">Projects that aren't public yet. Click one for details.</p>
+  <div class="projects">
+    <article class="card project" role="button" tabindex="0" data-title="NetFlux" data-body="A Chrome Manifest V3 developer tool built with React 18, TypeScript and Vite. It intercepts and rewrites requests with rules (declarativeNetRequest + webRequest), handles CORS, logs traffic DevTools-style, and bundles a 2FA authenticator, an OCR reader and a screen-capture studio."><div><div class="projecttop"><div class="num">01</div><span class="kbd">DETAILS</span></div><h3>NetFlux</h3><p>A network interceptor for frontend developers: rule-based request rewriting, CORS handling, a traffic logger, TOTP, OCR and screen capture in one Chrome extension.</p><div class="tags"><span class="tag">Chrome MV3</span><span class="tag">React 18</span><span class="tag">TypeScript</span></div></div><div class="open">Details →</div>
     </article>
-    <article class="card project" role="button" tabindex="0" data-title="Image Processing Tools" data-body="Client-side image experiments including crop workflows, collage/image extraction and browser-based processing without unnecessarily sending user files to a server."><div><div class="projecttop"><div class="num">02</div><span class="kbd">DETAILS</span></div><h3>Image Processing Tools</h3><p>Client-side image utilities exploring cropping, extraction, enhancement and practical browser processing.</p><div class="tags"><span class="tag">Canvas</span><span class="tag">JavaScript</span><span class="tag">PWA</span></div></div><div class="open">Explore concept →</div>
+    <article class="card project" role="button" tabindex="0" data-title="Enclave LAN Messenger" data-body="An offline-first desktop messenger inspired by the original IP Messenger, built on Tauri 2, Rust and React. Messages persist to SQLite straight away, peers are found by UDP discovery and talk over direct TCP with no server, file transfers are chunked, resumable and hash-verified, and traffic is encrypted with X25519 keys and ChaCha20-Poly1305."><div><div class="projecttop"><div class="num">02</div><span class="kbd">DETAILS</span></div><h3>Enclave LAN Messenger</h3><p>An offline-first, encrypted LAN messenger with peer discovery, resumable file transfers and no server.</p><div class="tags"><span class="tag">Tauri 2</span><span class="tag">Rust</span><span class="tag">React</span><span class="tag">SQLite</span></div></div><div class="open">Details →</div>
     </article>
-    <article class="card project" role="button" tabindex="0" data-title="LAN Messenger" data-body="An IP-based messenger inspired by classic LAN communication tools, redesigned around a modern chat experience."><div><div class="projecttop"><div class="num">03</div><span class="kbd">DETAILS</span></div><h3>LAN Messenger</h3><p>An IP-based messaging concept inspired by classic LAN communication with a modern chat experience.</p><div class="tags"><span class="tag">Web</span><span class="tag">TypeScript</span><span class="tag">Networking</span></div></div><div class="open">Explore concept →</div>
+    <article class="card project" role="button" tabindex="0" data-title="Remote Transfer Manager" data-body="A Windows desktop client for browsing, transferring files to and running commands on remote Windows servers. It uses only the SMB file sharing and WinRM remote management the servers already expose, so it installs nothing and changes nothing on them."><div><div class="projecttop"><div class="num">03</div><span class="kbd">DETAILS</span></div><h3>Remote Transfer Manager</h3><p>Browse, transfer and run things on remote Windows servers over SMB and WinRM, without installing an agent.</p><div class="tags"><span class="tag">Electron</span><span class="tag">React</span><span class="tag">TypeScript</span><span class="tag">Windows</span></div></div><div class="open">Details →</div>
     </article>
-    <article class="card project" role="button" tabindex="0" data-title="Desktop File Transfer" data-body="A desktop-oriented workflow for browsing remote Windows files, uploads and downloads, designed to reduce repetitive remote-desktop work."><div><div class="projecttop"><div class="num">04</div><span class="kbd">DETAILS</span></div><h3>Desktop File Transfer</h3><p>A desktop approach to remote file browsing, uploads and downloads for practical Windows environments.</p><div class="tags"><span class="tag">Electron</span><span class="tag">TypeScript</span><span class="tag">Windows</span></div></div><div class="open">Explore concept →</div>
-    </article>
-    <article class="card project" role="button" tabindex="0" data-title="Google Drive Explorer" data-body="An Electron-based file explorer concept focused on navigating Drive data and improving large-file transfer workflows."><div><div class="projecttop"><div class="num">05</div><span class="kbd">DETAILS</span></div><h3>Google Drive Explorer</h3><p>An Electron-based file explorer concept focused on Drive navigation and large-file transfer workflows.</p><div class="tags"><span class="tag">Electron</span><span class="tag">Google Drive</span><span class="tag">TypeScript</span></div></div><div class="open">Explore concept →</div>
-    </article>
-    <article class="card project" role="button" tabindex="0" data-title="Developer &amp; Browser Tools" data-body="Experiments around browser productivity: network logging, CORS, OCR, TOTP, screen recording and other utility workflows."><div><div class="projecttop"><div class="num">06</div><span class="kbd">DETAILS</span></div><h3>Developer &amp; Browser Tools</h3><p>Experiments around network logging, CORS, OCR, TOTP, screen recording and browser productivity.</p><div class="tags"><span class="tag">Chrome MV3</span><span class="tag">React</span><span class="tag">APIs</span></div></div><div class="open">Explore concept →</div>
+    <article class="card project" role="button" tabindex="0" data-title="Internal tools at smartapp.com" data-body="Tools I built for my team at smartapp.com: Bug Workflow, a local UI that walks bugs through triage, scheduling, start and finish with bulk actions; Tag Creator and BambooHR Timesheet Helper, two Manifest V3 Chrome extensions that automate repetitive data entry; and @smartapp/image-upscaler, a TypeScript library that upscales images in the browser with optional on-device AI super-resolution (ONNX Runtime Web)."><div><div class="projecttop"><div class="num">04</div><span class="kbd">DETAILS</span></div><h3>Internal tools at smartapp.com</h3><p>A bug-workflow automation UI, two Chrome extensions and a client-side image upscaling library built for my team.</p><div class="tags"><span class="tag">TypeScript</span><span class="tag">Chrome MV3</span><span class="tag">ONNX Runtime Web</span></div></div><div class="open">Details →</div>
     </article>
   </div>
   <div class="public"><div><b>More on GitHub</b><p>Public repositories are only a small slice of my overall engineering work.</p></div><a href="https://github.com/mdabrarsami" target="_blank" rel="noopener noreferrer">github.com/mdabrarsami ↗</a></div>
@@ -356,7 +367,8 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
         <li><b>Smartapp.com — Senior Software Engineer</b> (May 2024 – present). Finance, Budget Manager, Estimate Manager, Client and Vendor Contract, Bid Manager, Version Manager and Cost Code Settings modules. Mentors 4–5 developers.</li>
         <li><b>Centra Hub — Software Engineer / Full-Stack Developer</b> (May 2018 – May 2024). Technical consulting, MS SQL, C#/.NET, then full-stack Java.</li>
         <li><b>Professional projects.</b> TSRTC logistics, Benelli dealer management, NCC project management, Hyndava Nimantran event management.</li>
-        <li><b>Personal projects.</b> Netflux network debugging platform, a 100+ tool offline PWA, Google Drive Explorer, LAN Messenger, LAN File Transfer.</li>
+        <li><b>Live apps.</b> ASTools (196 on-device tools), Stackline interview prep, Hospix hospital management, Paper Games, Drive Explorer and evadental.in. Links in the Apps section above.</li>
+        <li><b>Other projects.</b> NetFlux Chrome developer tool, Enclave LAN messenger, Remote Transfer Manager, plus internal tools at smartapp.com.</li>
         <li><b>AI-assisted engineering.</b> Claude Code, ChatGPT, GitHub Copilot and MCP workflows across React, PWAs, extensions and developer tools.</li>
         <li><b>Education.</b> M.Sc. Computer Science, Osmania University Campus (2017). B.Sc. Computer Science, Osmania University (2015).</li>
       </ul>
@@ -410,7 +422,12 @@ footer{display:flex;justify-content:space-between;gap:20px;padding:26px 0 50px;c
   <div class="cmd" role="dialog" aria-modal="true" aria-label="Search portfolio">
     <input id="cmdInput" type="text" autocomplete="off" spellcheck="false" placeholder="Search portfolio…" aria-label="Search portfolio">
     <div id="cmdLinks">
-      <a href="#work">View projects</a>
+      <a href="#work">View live apps</a>
+      <a href="https://tools.abrlabs.in" target="_blank" rel="noopener noreferrer">Open ASTools ↗</a>
+      <a href="https://dsa-book.netlify.app" target="_blank" rel="noopener noreferrer">Open Stackline ↗</a>
+      <a href="https://hospixcare.netlify.app" target="_blank" rel="noopener noreferrer">Open Hospix ↗</a>
+      <a href="https://games.abrlabs.in" target="_blank" rel="noopener noreferrer">Open Paper Games ↗</a>
+      <a href="https://drive.abrlabs.in" target="_blank" rel="noopener noreferrer">Open Drive Explorer ↗</a>
       <a href="#journey">View experience</a>
       <a href="#stack">View technology stack</a>
       <a href="#resume">Download résumé</a>
@@ -453,7 +470,7 @@ function restoreFocus() {
 
 /* Project dialogs */
 var closeBtn = document.getElementById('close');
-document.querySelectorAll('.project').forEach(function (p) {
+document.querySelectorAll('.project:not(.live)').forEach(function (p) {
   function openProject() {
     lastFocus = p;
     document.getElementById('modalTitle').textContent = p.dataset.title;
