@@ -325,7 +325,7 @@ footer{background:var(--paper);position:relative;z-index:2}
     <div class="hline" style="top:var(--nav)" aria-hidden="true"></div>
     <div class="hline" style="top:55%" aria-hidden="true"></div>
     <div class="ghost" aria-hidden="true"><span id="ghost">ABRAR</span></div>
-    <div class="stack" id="stack" aria-hidden="true">
+    <div class="stack" id="heroStack" aria-hidden="true">
       <figure class="f1"><img src="assets/apps/hospix.jpg" alt="" width="1536" height="770"></figure>
       <figure class="f2"><img src="assets/apps/stackline.jpg" alt="" width="1565" height="784"></figure>
       <figure class="f3"><img src="assets/apps/astools.jpg" alt="" width="1565" height="784"></figure>
@@ -741,7 +741,7 @@ footer{background:var(--paper);position:relative;z-index:2}
   gsap.timeline({ defaults: { ease: 'power4.out' } })
     .from('#ghost', { yPercent: 25, autoAlpha: 0, duration: 1.6 }, 0)
     .from('#nav > *', { y: -30, autoAlpha: 0, duration: 0.8, stagger: 0.06, clearProps: 'transform' }, 0.1)
-    .from('#stack figure', { y: 160, autoAlpha: 0, duration: 1.3, stagger: 0.12, ease: 'expo.out' }, 0.2)
+    .from('#heroStack figure', { y: 160, autoAlpha: 0, duration: 1.3, stagger: 0.12, ease: 'expo.out' }, 0.2)
     .from(chars, { yPercent: 110, duration: 1.1, stagger: 0.025 }, 0.15)
     .from('#spec li', { y: 16, autoAlpha: 0, duration: 0.7, stagger: 0.07 }, 0.4)
     .from('#heroside', { y: 30, autoAlpha: 0, duration: 0.9 }, 0.6);
@@ -750,7 +750,7 @@ footer{background:var(--paper);position:relative;z-index:2}
   var heroST = { trigger: document.documentElement, start: 0, end: vh, scrub: true, invalidateOnRefresh: true };
   gsap.to('#heroin', { scale: 0.9, y: -90, opacity: 0.15, ease: 'none', scrollTrigger: heroST });
   gsap.to('#ghost', { xPercent: -12, ease: 'none', scrollTrigger: heroST });
-  gsap.to('#stack', { yPercent: -18, ease: 'none', scrollTrigger: heroST });
+  gsap.to('#heroStack', { yPercent: -18, ease: 'none', scrollTrigger: heroST });
 
   /* Words fill in as you scroll */
   gsap.fromTo(splitWords(document.getElementById('wordreveal')), { color: '#c9cdcb' }, { color: '#171717', stagger: 0.1, ease: 'none', scrollTrigger: { trigger: '#wordreveal', start: 'top 85%', end: 'bottom 45%', scrub: true } });
