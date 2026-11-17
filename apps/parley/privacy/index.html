@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Privacy policy for Parley, a Windows desktop client for Google Chat: what Google data it uses, where it is stored, and how to remove it.">
+<title>Privacy policy | Parley</title>
+<link rel="icon" href="../icon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Antonio:wght@500;600;700&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../parley.css">
+</head>
+<body>
+<header class="top">
+  <a class="brand" href="/apps/parley/"><img src="../icon.svg" alt="">Parley</a>
+  <nav aria-label="Parley">
+    <a href="/apps/parley/">Overview</a>
+    <a href="/apps/parley/privacy/" aria-current="page">Privacy policy</a>
+    <a href="/apps/parley/terms/">Terms</a>
+    <a href="/">abrlabs.in</a>
+  </nav>
+</header>
+
+<main>
+  <article class="doc">
+    <h1>Privacy policy</h1>
+    <p class="updated">Last updated: 18 November 2026</p>
+
+    <p>Parley is a Windows desktop app for Google Chat, built by Md Abrar Sami ("the developer"). This policy explains what information Parley uses, where it is kept, and what control you have over it.</p>
+    <p>The short version: Parley runs on your computer and talks to Google directly. The developer does not run a server that receives your messages, and does not collect, sell or share your data.</p>
+
+    <h2>Information Parley accesses</h2>
+    <p>When you sign in with Google, you grant Parley access to the following. Parley uses each one only for the purpose shown.</p>
+    <ul>
+      <li><strong>Your basic profile</strong> (name, email address, profile picture): to show which account is signed in.</li>
+      <li><strong>Your Google Chat messages and attachments</strong>: to display your conversations, and to send, edit and delete messages and reactions when you ask it to.</li>
+      <li><strong>The chats you are in and their members</strong> (direct messages, group chats, spaces): to list your conversations, show who is in them, and to create a chat, add a member or leave when you ask.</li>
+      <li><strong>Your read state and notification settings in Chat</strong>: to show unread counts, mark chats read or unread, and apply the mute and notification choices you make.</li>
+      <li><strong>Your Chat availability and status</strong>: to show and change your own status when you ask.</li>
+      <li><strong>Your organisation's directory, read-only</strong>: to let you find a colleague by name when starting a chat or mentioning someone.</li>
+      <li><strong>Google Meet</strong>: to create a meeting link when you choose to start a call or share one.</li>
+      <li><strong>Google Cloud Pub/Sub</strong>: to receive a signal from Google that something new has arrived in one of your chats, so messages appear without delay.</li>
+    </ul>
+
+    <h2>Where your information is stored</h2>
+    <ul>
+      <li>Messages, chat details and downloaded attachments are stored in a database and cache folder on your own computer, under your Windows user profile.</li>
+      <li>The token that keeps you signed in is stored in Windows Credential Manager on your computer.</li>
+      <li>Your settings, such as theme and notification preferences, are stored on your computer.</li>
+    </ul>
+    <p>None of this is sent to the developer. The developer has no access to your messages, your account or your computer.</p>
+
+    <h2>How new-message signals work</h2>
+    <p>To deliver messages promptly, Parley asks Google to publish a notice to a Google Cloud Pub/Sub topic whenever something changes in your chats. These notices are requested without message content: they carry only an identifier for the message or chat that changed. Parley then fetches the actual message from Google using your own sign-in. The topic is hosted in a Google Cloud project owned by the developer and is used only to pass these notices to the app.</p>
+
+    <h2>Who your information is shared with</h2>
+    <p>Parley does not sell your information and does not share it with advertisers, analytics services or data brokers. Information leaves your computer only in these cases:</p>
+    <ul>
+      <li><strong>Google</strong>: every request Parley makes goes to Google's own services, using your sign-in, to read and send your Chat data. Google's handling of that data is covered by Google's privacy policy.</li>
+      <li><strong>GIPHY, only if you turn it on</strong>: GIF search is off until you add your own GIPHY API key. If you do, the words you type into GIF search are sent to GIPHY. Nothing from your chats is sent.</li>
+    </ul>
+
+    <h2>Use of Google user data</h2>
+    <p>Parley's use and transfer of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. In particular:</p>
+    <ul>
+      <li>Google user data is used only to provide the features you see in the app.</li>
+      <li>It is not transferred to anyone else, except as needed to provide those features (to Google itself), to comply with the law, or with your explicit consent.</li>
+      <li>It is not used for advertising.</li>
+      <li>No person reads your data. The developer has no access to it.</li>
+      <li>It is not used to train artificial intelligence or machine learning models.</li>
+    </ul>
+
+    <h2>Keeping and deleting your information</h2>
+    <ul>
+      <li>Data stays on your computer for as long as you stay signed in.</li>
+      <li><strong>Sign out</strong> in Parley's settings to remove the stored chats and the saved sign-in from your computer.</li>
+      <li><strong>Uninstall</strong> Parley from Windows to remove the app. To remove any leftover files, delete the <code>com.parley.desktop</code> folders under <code>%APPDATA%</code> and <code>%LOCALAPPDATA%</code>.</li>
+      <li><strong>Revoke access</strong> at any time from your Google Account, under Security, then "Your connections to third-party apps and services". After that, Parley can no longer reach your account.</li>
+    </ul>
+    <p>Deleting data from Parley does not delete it from Google Chat. Your conversations remain in your Google account.</p>
+
+    <h2>Security</h2>
+    <p>Parley connects to Google over encrypted connections. Your sign-in token is protected by Windows Credential Manager. Because your data is stored on your computer, anyone who can use your Windows account can open Parley, so protect your computer as you would for any app that holds private messages.</p>
+
+    <h2>Children</h2>
+    <p>Parley is a workplace tool and is not directed at children under 13.</p>
+
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the new version will be posted on this page with a new date at the top.</p>
+
+    <h2>Contact</h2>
+    <p>Questions about this policy or about your data: <a href="mailto:mdabrarsami@gmail.com?subject=Parley%20privacy">mdabrarsami@gmail.com</a>.</p>
+  </article>
+</main>
+
+<footer>
+  <span>Parley is built by Md Abrar Sami. Google Chat and Google Workspace are trademarks of Google LLC.</span>
+  <a href="/apps/parley/">Overview</a>
+  <a href="/apps/parley/terms/">Terms</a>
+  <a href="mailto:mdabrarsami@gmail.com?subject=Parley">Contact</a>
+</footer>
+</body>
+</html>
