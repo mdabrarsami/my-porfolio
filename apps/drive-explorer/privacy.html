@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy policy - Drive Explorer</title>
+<meta name="description" content="How Drive Explorer handles Google user data: what it accesses, where it is stored, who it is shared with, and how to delete it.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%231f4fd8' d='M1.5 3.5A1.5 1.5 0 0 1 3 2h3.2l1.3 1.6H13a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 13 13.6H3a1.5 1.5 0 0 1-1.5-1.5z'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@125,600;125,700&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<link rel="stylesheet" href="assets/site.css">
+</head>
+<body>
+
+<main class="window">
+  <div class="titlebar">
+    <svg width="15" height="15" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M1.5 3.5A1.5 1.5 0 0 1 3 2h3.2l1.3 1.6H13a1.5 1.5 0 0 1 1.5 1.5v7A1.5 1.5 0 0 1 13 13.6H3a1.5 1.5 0 0 1-1.5-1.5z"/></svg>
+    <strong style="font-weight:600">Drive Explorer</strong>
+    <span class="titlebar__buttons" aria-hidden="true"><span>&#8210;</span><span>&#9633;</span><span>&#10005;</span></span>
+  </div>
+
+  <div class="toolbar">
+    <span class="toolbar__nav" aria-hidden="true"><span>&#8592;</span><span>&#8594;</span><span>&#8593;</span><span>&#8635;</span></span>
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <a href="index.html">Drive Explorer</a><span aria-hidden="true">&#8250;</span><span class="crumbs__here" aria-current="page">Privacy policy</span>
+    </nav>
+  </div>
+
+  <div class="panes">
+    <nav class="nav" aria-label="Site">
+      <p class="nav__group">This app</p>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="index.html"><span aria-hidden="true">&#9782;</span> Home</a></li>
+        <li><a class="nav__link" href="privacy.html" aria-current="page"><span aria-hidden="true">&#9781;</span> Privacy policy</a></li>
+        <li><a class="nav__link" href="terms.html"><span aria-hidden="true">&#9781;</span> Terms of service</a></li>
+      </ul>
+      <hr class="nav__sep">
+      <p class="nav__group">Elsewhere</p>
+      <ul class="nav__list">
+        <li><a class="nav__link" href="mailto:mdabrarsami@gmail.com"><span aria-hidden="true">&#9993;</span> Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="content">
+      <p class="eyebrow">Effective 11 September 2026</p>
+      <h1>Privacy policy</h1>
+      <p class="lede">
+        Drive Explorer is a Windows desktop application that manages your Google Drive.
+        It runs entirely on your own computer. There is no Drive Explorer server, so
+        there is nowhere for your data to be collected to.
+      </p>
+
+      <div class="callout">
+        <p>Drive Explorer's use and transfer of information received from Google APIs to any other app will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>, including the Limited Use requirements.</p>
+      </div>
+
+      <section class="sec">
+        <h2>Who runs this app</h2>
+        <p>
+          Drive Explorer is an independent project maintained by an individual
+          developer. It is not affiliated with, sponsored by or endorsed by Google LLC.
+          Contact: <a href="mailto:mdabrarsami@gmail.com">mdabrarsami@gmail.com</a>.
+        </p>
+      </section>
+
+      <section class="sec">
+        <h2>What the app accesses</h2>
+        <p class="sec__note">When you sign in, you grant Drive Explorer these scopes. It uses them only for the features described here.</p>
+        <dl class="scopes">
+          <dt>https://www.googleapis.com/auth/drive</dt>
+          <dd>Lists, opens, uploads, downloads, moves, copies, renames and trashes files and folders in your Drive, and reads their names, sizes, types, owners and modification dates so the app can display them. This is the feature set of the app; it is used for nothing else.</dd>
+          <dt>https://www.googleapis.com/auth/userinfo.email</dt>
+          <dd>Reads your email address, to label the signed-in account and to keep multiple accounts apart.</dd>
+          <dt>https://www.googleapis.com/auth/userinfo.profile</dt>
+          <dd>Reads your display name and profile picture, shown in the account switcher.</dd>
+        </dl>
+      </section>
+
+      <section class="sec">
+        <h2>Where it is stored</h2>
+        <p>Everything the app keeps is written to your own computer, under your Windows user profile.</p>
+        <table class="table">
+          <thead>
+            <tr><th scope="col">What</th><th scope="col">Where</th><th scope="col">Protection</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Google sign-in token</td><td>Encrypted vault in the app's data folder</td><td>Encrypted with Windows DPAPI through Electron safeStorage, tied to your Windows account</td></tr>
+            <tr><td>File listing cache (names, sizes, types, dates, folder structure)</td><td>Local database in the app's data folder</td><td>Windows file permissions on your user profile</td></tr>
+            <tr><td>Your account email, name and picture URL</td><td>Same local database</td><td>Windows file permissions on your user profile</td></tr>
+            <tr><td>Diagnostic logs (actions taken, timings, error codes)</td><td>Log files in the app's data folder</td><td>Tokens and file contents are stripped before anything is written</td></tr>
+          </tbody>
+        </table>
+        <p>File contents are not cached. A file is downloaded only when you ask for it, and it goes to the folder you choose.</p>
+      </section>
+
+      <section class="sec">
+        <h2>Who it is shared with</h2>
+        <ul class="plain">
+          <li>Nobody. Your Google data is sent only between your computer and Google's own API endpoints.</li>
+          <li>There is no analytics, no telemetry, no crash reporting service and no advertising.</li>
+          <li>Nothing is sold, rented or transferred, and none of it is used to train any machine learning or AI model.</li>
+          <li>The developer cannot see your files, your account or your logs.</li>
+        </ul>
+      </section>
+
+      <section class="sec">
+        <h2>How long it is kept</h2>
+        <p>
+          The token and the local cache stay on your computer until you remove them. Signing out
+          of an account inside the app revokes the token with Google and deletes that account's
+          cached data at once.
+        </p>
+      </section>
+
+      <section class="sec">
+        <h2>How to revoke access and delete your data</h2>
+        <ol class="plain">
+          <li>In Drive Explorer, open Settings, then Accounts, then Sign out. This revokes the token with Google and deletes the local record of that account.</li>
+          <li>You can also revoke access at any time from your <a href="https://myaccount.google.com/permissions">Google Account permissions page</a>, whether or not the app is installed.</li>
+          <li>To remove everything, uninstall the app and delete its data folder at <span style="font-family:'IBM Plex Mono',monospace">%APPDATA%\Drive Explorer</span>.</li>
+        </ol>
+      </section>
+
+      <section class="sec">
+        <h2>Children</h2>
+        <p>Drive Explorer is not directed at children under 13, and the developer does not knowingly collect any data from them.</p>
+      </section>
+
+      <section class="sec">
+        <h2>Changes to this policy</h2>
+        <p>
+          If this policy changes, the new version is published on this page with a new effective
+          date. Material changes will also be noted in the release notes on GitHub.
+        </p>
+      </section>
+
+      <p class="stamp">Last updated 11 September 2026</p>
+    </div>
+  </div>
+
+  <div class="statusbar">
+    <span>Drive Explorer 1.0.0</span>
+    <span>MIT licence</span>
+    <span><a href="index.html">Home</a> &middot; <a href="terms.html">Terms</a></span>
+    <span class="statusbar__end">An independent project. Not affiliated with or endorsed by Google LLC.</span>
+  </div>
+</main>
+
+</body>
+</html>
